@@ -26,6 +26,9 @@ extern "C" fn kmain() {
 
     println!("starting (EL{el})");
 
+    // Enable FP, Advanced SIMD, SME, and SVE instructions
+    unsafe { asm!("msr cpacr_el1, {}", in(reg) (0b11u64 << 20 | 0b11 << 24)) }
+
     run_tests();
 
     println!("finished");
@@ -58,9 +61,17 @@ fn run_test(instruction: u32) {
 #[repr(C)]
 #[derive(Default, Clone, Copy)]
 struct MachineContext {
-    gprs: [u64; 31],
+    gprs: [u64; 32],
+    fprs: [u128; 32],
     flags: u64,
+    fp_status: u64,
 }
+
+const _: () = {
+    assert!(core::mem::offset_of!(MachineContext, fprs) == 256);
+    assert!(core::mem::offset_of!(MachineContext, flags) == 768);
+    assert!(core::mem::offset_of!(MachineContext, fp_status) == 776);
+};
 
 impl MachineContext {
     pub fn random() -> Self {
@@ -68,6 +79,7 @@ impl MachineContext {
 
         let mut ctx = Self::default();
         small_rng.fill(&mut ctx.gprs);
+        small_rng.fill(&mut ctx.fprs);
         ctx
     }
 }
@@ -78,7 +90,12 @@ impl Display for MachineContext {
             writeln!(f, "X{i:02}: {value:#018x}")?;
         }
 
+        for (i, value) in self.fprs.iter().enumerate() {
+            writeln!(f, "Q{i:02}: {value:#018x}")?;
+        }
+
         writeln!(f, "flags: {:#018x}", self.flags)?;
+        writeln!(f, "fp status: {:#018x}", self.fp_status)?;
 
         Ok(())
     }
@@ -110,6 +127,24 @@ execute_test:
 	stp x0, x1, [sp, #-16]! // 112 &input &output
 	// load input state
 
+	// V-REGS
+	ldp q0, q1, [x0, 256 + (32 * 0)]
+	ldp q2, q3, [x0, 256 + (32 * 1)]
+	ldp q4, q5, [x0, 256 + (32 * 2)]
+	ldp q6, q7, [x0, 256 + (32 * 3)]
+	ldp q8, q9, [x0, 256 + (32 * 4)]
+	ldp q10, q11, [x0, 256 + (32 * 5)]
+	ldp q12, q13, [x0, 256 + (32 * 6)]
+	ldp q14, q15, [x0, 256 + (32 * 7)]
+	ldp q16, q17, [x0, 256 + (32 * 8)]
+	ldp q18, q19, [x0, 256 + (32 * 9)]
+	ldp q20, q21, [x0, 256 + (32 * 10)]
+	ldp q22, q23, [x0, 256 + (32 * 11)]
+	ldp q24, q25, [x0, 256 + (32 * 12)]
+	ldp q26, q27, [x0, 256 + (32 * 13)]
+	ldp q28, q29, [x0, 256 + (32 * 14)]
+	ldp q30, q31, [x0, 256 + (32 * 15)]
+
 	// G-REGS
 	ldp x2, x3, [x0, 16 * 1]
 	ldp x4, x5, [x0, 16 * 2]
@@ -130,6 +165,16 @@ execute_test:
 	// FLAGS
 	ldr x1, [x0, 768]
 	msr nzcv, x1
+
+	ldr x1, [x0, 776]
+	msr fpsr, x1
+
+	// ROUNDING MODE (RZ: Round towads zero)
+	// FLUSH-TO-ZERO (0)
+	mrs x1, fpcr
+	and x1, x1, #0xfffffffffe3fffff
+	orr x1, x1, #0x0000000000c00000
+	msr fpcr, x1
 
 	ldp x0, x1, [x0]
 
@@ -159,6 +204,23 @@ test_slot:
 	stp x28, x29, [x0, 16 * 14]
 	str x30,     [x0, 16 * 15]
 
+	// V-REGS
+	stp q0, q1, [x0, 256 + (32 * 0)]
+	stp q2, q3, [x0, 256 + (32 * 1)]
+	stp q4, q5, [x0, 256 + (32 * 2)]
+	stp q6, q7, [x0, 256 + (32 * 3)]
+	stp q8, q9, [x0, 256 + (32 * 4)]
+	stp q10, q11, [x0, 256 + (32 * 5)]
+	stp q12, q13, [x0, 256 + (32 * 6)]
+	stp q14, q15, [x0, 256 + (32 * 7)]
+	stp q16, q17, [x0, 256 + (32 * 8)]
+	stp q18, q19, [x0, 256 + (32 * 9)]
+	stp q20, q21, [x0, 256 + (32 * 10)]
+	stp q22, q23, [x0, 256 + (32 * 11)]
+	stp q24, q25, [x0, 256 + (32 * 12)]
+	stp q26, q27, [x0, 256 + (32 * 13)]
+	stp q28, q29, [x0, 256 + (32 * 14)]
+	stp q30, q31, [x0, 256 + (32 * 15)]
 
 	mov x2, x0
 	ldp x0, x1, [sp], #16 // 112 out_x0 out_x1
@@ -167,6 +229,9 @@ test_slot:
 	// FLAGS
 	mrs x0, nzcv
 	str x0, [x2, 768]
+
+	mrs x0, fpsr
+	str x0, [x2, 776]
 
 	add sp, sp, #16
 
