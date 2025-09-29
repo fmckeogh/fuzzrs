@@ -38,12 +38,13 @@ extern "C" fn kmain() {
 fn run_tests() {
     // //cb23c083 	sub	x3, x4, w3, sxtw
     // run_test(0xcb23c083);
+    let mut rng = SmallRng::seed_from_u64(0x1234);
 
-    instructions().iter().for_each(|i| run_test(*i));
+    instructions().iter().for_each(|i| run_test(&mut rng, *i));
 }
 
-fn run_test(instruction: u32) {
-    let input_ctx = MachineContext::random();
+fn run_test(rng: &mut SmallRng, instruction: u32) {
+    let input_ctx = MachineContext::random(rng);
     let mut output_ctx = MachineContext::default();
 
     println!("running test: {instruction:#010x}");
@@ -74,12 +75,10 @@ const _: () = {
 };
 
 impl MachineContext {
-    pub fn random() -> Self {
-        let mut small_rng = SmallRng::seed_from_u64(0x1234);
-
+    pub fn random(rng: &mut SmallRng) -> Self {
         let mut ctx = Self::default();
-        small_rng.fill(&mut ctx.gprs);
-        small_rng.fill(&mut ctx.fprs);
+        rng.fill(&mut ctx.gprs);
+        rng.fill(&mut ctx.fprs);
         ctx
     }
 }
