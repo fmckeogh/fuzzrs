@@ -1055,636 +1055,596 @@ cneg x18, x20, eq
 cneg xzr, x25, eq
 cneg x15, x6, ne
 cneg x13, x14, eq
-cnt v3.8b, v8.8b
-cnt v18.8b, v6.8b
-cnt v3.8b, v8.8b
-cnt v23.8b, v27.8b
-cnt v22.8b, v22.8b
-cnt v7.8b, v22.8b
-cnt v18.8b, v22.8b
-cnt v10.8b, v5.8b
-cnt v30.8b, v18.8b
-cnt v29.8b, v17.8b
-cnt v6.16b, v4.16b
-cnt v16.16b, v0.16b
-cnt v16.16b, v31.16b
-cnt v6.16b, v31.16b
-cnt v13.16b, v20.16b
-cnt v11.16b, v16.16b
-cnt v28.16b, v29.16b
-cnt v23.16b, v31.16b
-cnt v5.16b, v14.16b
-cnt v26.16b, v28.16b
-csel w4, w2, w18, eq
-csel w24, w29, w27, ne
-csel w15, w25, w8, ne
-csel w29, w24, w21, ne
-csel w23, w27, w12, eq
-csel w15, w23, w21, eq
-csel w21, w12, w11, eq
-csel w26, w6, w22, ne
-csel w8, w9, w21, eq
-csel w6, w17, w23, ne
-csel x10, xzr, x10, ne
-csel x23, x0, x20, ne
-csel x27, x0, x19, ne
-csel x23, x8, x23, eq
-csel x20, x2, x7, ne
-csel x8, x29, x14, eq
-csel x6, x3, x17, eq
-csel x20, x8, x1, eq
-csel x8, x12, x5, ne
-csel x12, x25, x14, ne
-cset w25, eq
-cset w18, ne
+csel w3, w8, w18, eq
+csel w3, w8, w23, ne
+csel w22, w22, w7, eq
+csel w18, w22, w10, ne
+csel w30, w18, w29, ne
+csel w6, w4, w16, eq
+csel w16, wzr, w6, ne
+csel w13, w20, w11, eq
+csel w28, w29, w23, ne
+csel w5, w14, w26, eq
+csel x4, x2, x18, eq
+csel x24, x29, x27, ne
+csel x15, x25, x8, ne
+csel x29, x24, x21, ne
+csel x23, x27, x12, eq
+csel x15, x23, x21, eq
+csel x21, x12, x11, eq
+csel x26, x6, x22, ne
+csel x8, x9, x21, eq
+csel x6, x17, x23, ne
 cset w10, ne
-cset w29, ne
-cset w12, eq
-cset w14, eq
-cset w2, eq
-cset w5, eq
-cset wzr, eq
-cset w21, eq
-cset x30, eq
-cset x18, eq
-cset x2, eq
-cset x6, eq
+cset w10, ne
+cset w23, eq
+cset w20, ne
+cset w27, eq
+cset w19, ne
+cset w23, eq
+cset w23, eq
+cset w20, eq
+cset w7, ne
+cset x8, ne
+cset x14, eq
+cset x6, ne
 cset x17, eq
-cset x22, ne
-cset x22, eq
-cset x28, ne
-cset x18, ne
-cset x0, eq
-csetm w30, eq
-csetm w18, eq
+cset x20, eq
+cset x1, eq
+cset x8, eq
+cset x5, ne
+cset x12, ne
+cset x14, ne
+csetm w25, eq
+csetm w18, ne
 csetm w10, ne
-csetm w8, ne
-csetm w13, ne
-csetm w29, eq
-csetm w20, eq
-csetm w18, eq
-csetm w8, eq
-csetm w5, ne
-csetm x13, ne
-csetm x4, ne
-csetm x3, eq
-csetm x4, ne
-csetm x26, eq
-csetm x19, eq
+csetm w29, ne
+csetm w12, eq
+csetm w14, eq
+csetm w2, eq
+csetm w5, eq
+csetm wzr, eq
+csetm w21, eq
+csetm x30, eq
 csetm x18, eq
-csetm x24, eq
-csetm x29, eq
-csetm x6, ne
-csinc w30, w3, w23, eq
-csinc w19, w9, w8, ne
-csinc w2, w13, w21, ne
-csinc w8, w25, w18, eq
-csinc w26, w23, w1, eq
-csinc w27, w21, w12, eq
-csinc w27, w4, w10, eq
-csinc w4, w16, w3, eq
-csinc w20, w26, w20, ne
-csinc w4, w29, w3, eq
-csinc x10, x24, x21, ne
-csinc x17, x7, xzr, ne
-csinc x30, x0, xzr, eq
-csinc x21, x11, x8, eq
-csinc x15, x18, x9, eq
-csinc x3, x12, x22, ne
-csinc x7, x11, x30, ne
-csinc x8, x1, x17, eq
-csinc x25, x6, x5, ne
-csinc x13, x4, x22, eq
-csinv w5, w22, w6, eq
-csinv w1, w14, w11, ne
-csinv w0, w20, w5, ne
-csinv w0, w27, w26, ne
-csinv w6, w25, w18, eq
-csinv w26, w3, w1, eq
-csinv w9, w6, wzr, ne
-csinv w11, w21, w3, eq
-csinv w11, w9, w10, ne
-csinv w23, w21, w30, ne
-csinv x9, x3, x27, eq
-csinv x30, x21, x17, ne
-csinv x14, x4, x19, ne
-csinv x7, x20, x29, ne
-csinv x27, x28, x8, eq
-csinv x17, x11, x22, ne
-csinv x20, x0, x10, ne
-csinv x22, x8, x2, ne
-csinv x11, x29, x9, ne
-csinv x19, x27, x14, ne
-csneg wzr, w2, w10, eq
-csneg w22, w7, w23, ne
-csneg w3, wzr, w23, ne
-csneg w10, w13, w18, eq
-csneg w14, w28, w9, eq
-csneg w4, w12, w3, ne
-csneg w9, w13, w24, eq
-csneg w8, w7, w30, ne
-csneg w9, w8, w13, ne
-csneg w16, w5, w17, ne
-csneg x4, x8, x8, ne
-csneg x22, x26, x13, eq
-csneg x22, x23, x8, eq
-csneg x3, x11, x9, eq
-csneg x24, x2, x9, eq
-csneg x9, x7, x7, eq
-csneg x15, x21, x17, ne
-csneg x26, x2, x19, eq
-csneg x11, x27, x13, ne
-csneg x22, x27, x5, eq
-dup v18.16B, w21
-dup v21.2S, w17
-dup v1.4S, w1
-dup v10.16B, w9
-dup v17.8H, w25
-dup v1.8B, w25
-dup v0.2S, w7
-dup v19.4H, w17
-dup v15.2S, w30
-dup v5.4S, w3
-dup v17.2D, x15
-dup v24.2D, x18
-dup v9.2D, x22
-dup v27.2D, x25
-dup v23.2D, x19
-dup v4.2D, x9
-dup v3.2D, x29
-dup v5.2D, x7
-dup v17.2D, x11
-dup v31.2D, x20
-eon w17, w14, w20
-eon w17, w6, w10
-eon w9, w15, w1
-eon w18, w11, w3
-eon w12, w2, w23
-eon w0, w6, w11
-eon w1, w10, w0
-eon w11, w15, w9
-eon w27, w0, w0
-eon wzr, wzr, w29
-eon w18, w17, w11, lsl #1
-eon w17, w16, w11, lsl #3
-eon w29, w12, w21, lsl #4
-eon w12, w9, w20, lsl #0
-eon w30, w24, w22, lsr #1
-eon w17, w14, w1, lsr #1
-eon w30, w2, w30, lsl #1
-eon w0, w27, w24, asr #2
-eon w9, w8, w8, lsr #2
-eon w22, w10, w27, lsr #0
-eon x6, x9, x26
-eon x28, x22, x27
-eon x13, x4, x28
-eon x29, x18, x27
-eon xzr, x16, x4
-eon x7, x17, xzr
-eon xzr, x28, x27
-eon x9, x5, x3
-eon x7, x23, x25
-eon x18, x18, x4
-eon x20, x25, x13, lsl #2
-eon x3, x9, x3, lsl #4
-eon x0, x26, x0, asr #3
-eon x5, x7, x27, lsl #0
-eon x24, x0, x16, lsr #2
-eon x23, x20, x29, lsr #4
-eon x1, x29, xzr, lsr #2
-eon x21, x17, x20, lsl #1
-eon x26, x24, x19, asr #0
-eon x30, xzr, x0, lsl #4
-eor w18, w17, #0x10101010
-eor w9, w14, #0x10101010
-eor w0, w2, #0x10101010
-eor w21, w9, #0x10101010
-eor w30, w8, #0x10101010
-eor w5, w29, #0x10101010
-eor w28, w21, #0x10101010
-eor w2, w14, #0x10101010
-eor w19, w6, #0x10101010
-eor w22, w6, #0x10101010
-eor x9, x13, #0x1010101010101010
-eor x15, x4, #0x1010101010101010
-eor x9, x19, #0x1010101010101010
-eor x13, x11, #0x1010101010101010
-eor x4, x0, #0x1010101010101010
-eor x20, x1, #0x1010101010101010
-eor x25, x23, #0x1010101010101010
-eor x2, x6, #0x1010101010101010
-eor x8, x16, #0x1010101010101010
-eor x29, x26, #0x1010101010101010
-eor w5, w7, w25
-eor w0, w25, w29
-eor w10, w18, w16
-eor w22, w15, w27
-eor w11, w18, w28
-eor w8, w9, w29
-eor w3, w4, w20
-eor w20, w30, w27
-eor w18, w10, w11
-eor w23, w6, w5
-eor w3, w12, w13, lsl #0
-eor w6, w25, w22, lsl #4
-eor w12, w7, w5, ror #3
-eor w1, w0, w3, ror #2
-eor w7, w19, w23, asr #4
-eor w10, w16, w26, lsr #3
-eor wzr, w4, w3, lsl #0
-eor w15, w18, w26, asr #3
-eor w4, w18, w18, lsr #3
-eor w12, w11, w10, ror #3
-eor x13, x22, x29
-eor x5, x28, x12
-eor x15, x13, x6
-eor x16, x4, x5
-eor x21, x7, x18
-eor x21, x22, x4
-eor x15, x28, x15
-eor x19, x15, x1
-eor x29, x25, x13
-eor x8, x3, x28
-eor x18, x16, x18, ror #3
-eor x15, x27, x4, lsl #2
-eor x21, x0, x7, asr #1
-eor x25, xzr, x29, lsr #3
-eor x26, x12, x2, lsr #0
-eor xzr, x2, x26, ror #0
-eor x22, x25, x21, lsr #4
-eor x11, x24, x4, ror #2
-eor x6, x4, x20, lsr #4
-eor x27, x6, x14, lsl #0
-extr w29, w18, w16, #1
-extr w27, w29, wzr, #5
-extr w24, w6, w2, #0
-extr w0, w24, w23, #3
-extr w3, w15, w13, #0
-extr w3, w19, w23, #5
-extr w0, w5, w18, #0
-extr w19, w11, w10, #2
-extr w29, w26, w16, #3
-extr w23, w15, w22, #1
-extr x21, x25, x30, #5
-extr x17, x21, x30, #0
-extr x5, x12, x6, #4
-extr xzr, x29, x0, #0
-extr x3, x18, x6, #4
-extr x29, x16, x7, #5
-extr x10, x23, x20, #2
-extr x6, x10, x17, #3
-extr x3, x15, x17, #0
-extr x5, x15, x8, #2
-lsl w27, w15, w18
-lsl w27, w12, w18
-lsl w27, w15, w5
-lsl w1, w6, w2
-lsl w18, w13, w29
-lsl w28, w4, w17
-lsl w30, w10, w28
-lsl w16, w5, wzr
-lsl wzr, w22, w20
-lsl w4, w6, w28
-lsl x14, x1, x11
-lsl x1, x28, x24
-lsl x19, x23, x7
-lsl x24, x25, x13
-lsl x27, x11, x26
-lsl x24, x7, x30
-lsl x10, x6, x8
-lsl x6, x22, x14
-lsl x5, x21, x4
-lsl x25, x26, x10
-lsl w22, w8, #0
-lsl w1, w9, #1
-lsl w25, w29, #1
-lsl w1, w21, #0
-lsl w14, w16, #4
-lsl w9, w9, #2
-lsl w7, w19, #0
-lsl w16, w25, #3
-lsl w30, w30, #2
-lsl w2, w24, #0
-lsl x13, x14, #3
-lsl x25, x15, #4
-lsl x1, x9, #4
-lsl x1, x10, #4
-lsl x26, x24, #1
-lsl x30, x1, #4
-lsl x10, x9, #2
-lsl x27, x25, #1
-lsl x3, x23, #3
-lsl x0, x25, #1
-lsr w23, w6, w5
-lsr w22, wzr, w21
-lsr wzr, w1, w30
-lsr w5, w2, w8
-lsr w1, w29, w0
-lsr w13, w27, w2
-lsr w2, w5, w11
-lsr w10, w1, w4
-lsr w11, w4, w27
-lsr w10, w4, w20
-lsr x2, x27, x27
-lsr x7, x17, x26
-lsr x28, x17, x27
-lsr x26, x22, x30
-lsr x2, x23, x27
-lsr x3, x4, x22
-lsr x5, x6, x28
-lsr x16, x16, x29
-lsr x20, x27, x1
-lsr x15, x6, x5
-lsr w3, w8, #1
-lsr w30, w15, #1
-lsr w25, w12, #1
-lsr w20, w6, #2
-lsr w18, w9, #4
-lsr w13, w12, #0
-lsr w4, w17, #1
-lsr w0, w1, #4
-lsr w29, w21, #2
-lsr w30, w4, #1
-lsr x3, x7, #3
-lsr x3, x6, #1
-lsr x20, xzr, #3
-lsr x23, x19, #4
-lsr x16, x6, #3
-lsr x0, x19, #4
-lsr x21, x23, #3
-lsr x17, x23, #3
-lsr x29, x20, #2
-lsr x4, x18, #4
-madd w18, w21, wzr, w7
-madd w24, w5, w12, w13
-madd w4, w29, w4, w23
-madd w21, w20, w29, w21
-madd w20, w17, w2, w10
-madd w8, wzr, w27, w0
-madd w30, w24, w20, w17
-madd w28, w7, w9, w14
-madd w28, w8, w22, w21
-madd w13, w2, w2, w17
-madd x0, x6, x8, x21
-madd x26, x6, x10, x14
-madd x23, x12, x24, xzr
-madd x12, x19, xzr, x10
-madd x11, x20, x27, x8
-madd x27, x4, x22, x23
-madd x12, x12, x12, x25
-madd x15, x14, x10, x15
-madd x20, x19, x4, x14
-madd x25, x14, x29, x16
-mneg w27, w21, w15
-mneg w7, w9, w15
-mneg w17, w20, w3
-mneg w12, w28, w30
-mneg w17, w19, w21
-mneg w29, wzr, w2
-mneg w23, w14, w16
-mneg w1, w29, w5
-mneg w20, w1, w19
-mneg w13, w16, w16
-mneg x29, x11, x6
-mneg x13, x18, x15
-mneg x28, x3, x3
-mneg xzr, x15, x0
-mneg x29, x0, x19
-mneg x18, x30, x18
-mneg x20, x21, x1
-mneg x5, x22, x30
-mneg x10, x11, x0
-mneg x29, x24, x16
-mov w3, w22
-mov w22, w20
-mov w16, w13
-mov w21, wsp
-mov w19, w6
-mov w4, wsp
-mov w18, w27
-mov w4, w25
-mov w13, w30
-mov w18, w2
-mov x25, x13
-mov x23, x9
-mov x29, x17
-mov x3, x11
-mov x10, x13
-mov x2, x28
-mov x4, x22
-mov x8, x6
-mov x20, x19
-mov x10, x19
-mov w26, w3
-mov w19, w0
-mov w30, w19
-mov w26, w11
-mov w17, w6
-mov w13, w4
-mov w19, w20
-mov w13, w30
-mov w5, w2
-mov w10, w20
-mov x15, x5
-mov x16, x18
-mov x28, x1
-mov x24, xzr
-mov x20, x29
-mov x19, x14
-mov x0, x6
-mov x15, x30
-mov x25, x9
-mov x9, x10
-movk w15, #5
-movk w14, #4
-movk w11, #1
-movk w0, #3
-movk w29, #2
-movk w5, #0
-movk w16, #5
-movk w30, #0
-movk w22, #2
-movk w11, #1
-movk w19, #4, lsl #16
-movk w25, #3, lsl #16
-movk w4, #0, lsl #16
-movk w17, #3, lsl #16
-movk w17, #3, lsl #16
-movk w7, #4, lsl #16
-movk w18, #5, lsl #16
-movk w2, #3, lsl #16
-movk w17, #1, lsl #16
-movk w14, #4, lsl #16
-movk x13, #3
-movk x27, #3
-movk x9, #5
-movk x9, #1
-movk x16, #1
-movk x10, #1
-movk x19, #2
-movk x23, #4
-movk x12, #2
-movk x21, #4
-movk x3, #3, lsl #16
-movk x30, #3, lsl #16
-movk x18, #3, lsl #16
-movk x19, #1, lsl #16
-movk x4, #1, lsl #16
-movk x18, #1, lsl #16
-movk x21, #1, lsl #16
-movk x15, #2, lsl #16
-movk x6, #4, lsl #16
-movk x29, #0, lsl #16
-movk x13, #0, lsl #32
-movk x26, #1, lsl #32
-movk x12, #5, lsl #32
-movk x25, #0, lsl #32
-movk x25, #4, lsl #32
-movk x22, #1, lsl #32
-movk x11, #5, lsl #32
-movk x18, #2, lsl #32
-movk x22, #3, lsl #32
-movk x1, #4, lsl #32
-movk x7, #1, lsl #48
-movk x11, #2, lsl #48
-movk x0, #0, lsl #48
-movk x26, #5, lsl #48
-movk x19, #3, lsl #48
-movk x29, #0, lsl #48
-movk xzr, #5, lsl #48
-movk x1, #1, lsl #48
-movk x8, #4, lsl #48
-movk x4, #2, lsl #48
-movn w9, #4
-movn wzr, #2
-movn w15, #5
-movn w18, #3
-movn w23, #0
-movn wzr, #4
-movn w7, #5
-movn w26, #4
-movn w5, #2
-movn w15, #0
-movn w11, #0, lsl #16
-movn w25, #3, lsl #16
-movn w4, #4, lsl #16
-movn w22, #2, lsl #16
-movn w21, #0, lsl #16
-movn w14, #4, lsl #16
-movn w21, #3, lsl #16
-movn w18, #0, lsl #16
-movn wzr, #3, lsl #16
-movn w10, #2, lsl #16
-movn x25, #3
-movn x20, #2
-movn x20, #4
-movn x8, #0
-movn x2, #1
-movn x18, #5
-movn x4, #3
-movn x24, #0
-movn x6, #1
-movn x20, #3
-movn x9, #1, lsl #16
-movn x25, #2, lsl #16
-movn x16, #3, lsl #16
-movn x3, #3, lsl #16
-movn x16, #3, lsl #16
-movn x5, #3, lsl #16
+csetm x2, eq
+csetm x6, eq
+csetm x17, eq
+csetm x22, ne
+csetm x22, eq
+csetm x28, ne
+csetm x18, ne
+csetm x0, eq
+csinc w30, w14, w18, eq
+csinc w10, w23, w8, ne
+csinc w13, w29, w29, eq
+csinc w20, w16, w18, eq
+csinc w8, w24, w5, ne
+csinc w13, w27, w4, ne
+csinc w3, w0, w4, ne
+csinc w26, w4, w19, eq
+csinc w18, w6, w24, eq
+csinc w29, w0, w6, ne
+csinc x30, x3, x23, eq
+csinc x19, x9, x8, ne
+csinc x2, x13, x21, ne
+csinc x8, x25, x18, eq
+csinc x26, x23, x1, eq
+csinc x27, x21, x12, eq
+csinc x27, x4, x10, eq
+csinc x4, x16, x3, eq
+csinc x20, x26, x20, ne
+csinc x4, x29, x3, eq
+csinv w10, w24, w21, ne
+csinv w17, w7, wzr, ne
+csinv w30, w0, wzr, eq
+csinv w21, w11, w8, eq
+csinv w15, w18, w9, eq
+csinv w3, w12, w22, ne
+csinv w7, w11, w30, ne
+csinv w8, w1, w17, eq
+csinv w25, w6, w5, ne
+csinv w13, w4, w22, eq
+csinv x5, x22, x6, eq
+csinv x1, x14, x11, ne
+csinv x0, x20, x5, ne
+csinv x0, x27, x26, ne
+csinv x6, x25, x18, eq
+csinv x26, x3, x1, eq
+csinv x9, x6, xzr, ne
+csinv x11, x21, x3, eq
+csinv x11, x9, x10, ne
+csinv x23, x21, x30, ne
+csneg w9, w3, w27, eq
+csneg w30, w21, w17, ne
+csneg w14, w4, w19, ne
+csneg w7, w20, w29, ne
+csneg w27, w28, w8, eq
+csneg w17, w11, w22, ne
+csneg w20, w0, w10, ne
+csneg w22, w8, w2, ne
+csneg w11, w29, w9, ne
+csneg w19, w27, w14, ne
+csneg xzr, x2, x10, eq
+csneg x22, x7, x23, ne
+csneg x3, xzr, x23, ne
+csneg x10, x13, x18, eq
+csneg x14, x28, x9, eq
+csneg x4, x12, x3, ne
+csneg x9, x13, x24, eq
+csneg x8, x7, x30, ne
+csneg x9, x8, x13, ne
+csneg x16, x5, x17, ne
+eon w4, w8, w8
+eon w15, w22, w26
+eon w13, w4, w22
+eon w23, w8, w26
+eon w3, w11, w9
+eon w12, w24, w2
+eon w9, w0, w9
+eon w7, w7, w18
+eon w15, w21, w17
+eon wzr, w26, w2
+eon w19, w30, w11, lsl #3
+eon w1, w22, w27, lsr #3
+eon w18, w13, w7, lsl #0
+eon w16, w1, w17, lsr #0
+eon w17, w27, w17, lsl #2
+eon w1, w14, wzr, lsr #0
+eon w1, w19, w6, lsl #4
+eon w20, w13, w5, asr #0
+eon w17, w1, wzr, asr #0
+eon w24, w9, w23, lsl #2
+eon x2, x26, x23
+eon x19, x19, x4
+eon x20, x1, x3
+eon x21, x9, x5
+eon x8, x16, x17
+eon x23, x4, xzr
+eon x28, x19, x17
+eon x14, x20, x17
+eon x6, x10, x9
+eon x15, x1, x18
+eon x11, x3, x12, asr #1
+eon x0, x6, x11, asr #2
+eon x0, x11, x15, lsr #0
+eon x0, x0, xzr, lsl #2
+eon x18, x17, x11, lsl #1
+eon x17, x16, x11, lsl #3
+eon x29, x12, x21, lsl #4
+eon x12, x9, x20, lsl #0
+eon x30, x24, x22, lsr #1
+eon x17, x14, x1, lsr #1
+eor w4, w2, #0x10101010
+eor w5, w8, #0x10101010
+eor w27, w24, #0x10101010
+eor w4, w9, #0x10101010
+eor w30, w30, #0x10101010
+eor w24, w10, #0x10101010
+eor w15, w2, #0x10101010
+eor w3, w26, #0x10101010
+eor w17, w27, #0x10101010
+eor w18, w28, #0x10101010
+eor x21, x27, #0x1010101010101010
+eor x16, x4, #0x1010101010101010
+eor x6, xzr, #0x1010101010101010
+eor x12, x27, #0x1010101010101010
+eor x13, x3, #0x1010101010101010
+eor x10, x25, #0x1010101010101010
+eor x29, x4, #0x1010101010101010
+eor x4, x13, #0x1010101010101010
+eor x25, x3, #0x1010101010101010
+eor x5, x8, #0x1010101010101010
+eor w0, w26, w0
+eor w0, w10, w5
+eor w7, w27, w4
+eor w7, w24, w0
+eor w16, w29, w3
+eor w23, w20, w29
+eor w9, w6, w1
+eor w29, wzr, w14
+eor w11, w21, w17
+eor w20, w24, w25
+eor w26, w24, w19, asr #0
+eor w30, wzr, w0, lsr #4
+eor w7, w17, w4, ror #0
+eor w7, w14, w2, lsl #2
+eor w9, w5, w21, lsl #4
+eor w1, w29, w5, lsr #2
+eor w30, w15, w14, asr #2
+eor w6, w16, w9, asr #0
+eor w13, w13, w27, lsr #4
+eor w9, w25, w19, lsl #4
+eor x11, x21, x3
+eor x0, x29, x22
+eor x1, x27, x27
+eor x23, x16, x26
+eor x6, x30, x12
+eor x16, x5, x28
+eor x26, x11, x5
+eor x7, x25, x0
+eor x25, x29, x10
+eor x18, x16, x22
+eor x15, x27, x11, asr #0
+eor x8, x9, x29, ror #0
+eor x20, x20, x30, ror #0
+eor x10, x11, x23, asr #3
+eor x3, x12, x13, lsl #0
+eor x6, x25, x22, lsl #4
+eor x12, x7, x5, ror #3
+eor x1, x0, x3, ror #2
+eor x7, x19, x23, asr #4
+eor x10, x16, x26, lsr #3
+extr wzr, w4, w3, #4
+extr w0, w15, w18, #4
+extr w6, w10, w4, #4
+extr w18, w9, w10, #4
+extr w11, w10, w15, #4
+extr w13, w22, w29, #3
+extr w28, w12, w15, #1
+extr w6, w16, w4, #1
+extr w21, w7, w18, #5
+extr w22, w4, w15, #2
+extr x15, x19, x15, #1
+extr x29, x25, x13, #2
+extr x3, x28, x18, #0
+extr x18, x15, x21, #5
+extr x27, x4, x28, #5
+extr x21, x0, x7, #4
+extr x7, x25, xzr, #5
+extr x29, x15, x26, #2
+extr x2, x9, x13, #1
+extr x2, x26, x7, #1
+lsl w22, w25, w21
+lsl w9, w9, w11
+lsl w24, w4, w15
+lsl w20, w6, w4
+lsl w20, w13, w14
+lsl w27, w6, w14
+lsl w24, w3, w29
+lsl w18, w16, wzr
+lsl w27, w29, wzr
+lsl w29, w24, w6
+lsl x2, x14, x0
+lsl x24, x23, x9
+lsl x3, x15, x13
+lsl x18, x3, x19
+lsl x23, x23, x0
+lsl x5, x18, x6
+lsl x19, x11, x10
+lsl x16, x29, x26
+lsl x16, x25, x23
+lsl x15, x22, x15
+lsl w21, w25, #2
+lsl w21, w17, #3
+lsl w30, w20, #2
+lsl w12, w6, #2
+lsl wzr, w29, #0
+lsl w0, w3, #0
+lsl w6, w22, #3
+lsl w16, w7, #3
+lsl w10, w23, #4
+lsl w2, w6, #3
+lsl x17, x27, #1
+lsl x15, x17, #3
+lsl x5, x15, #4
+lsl x10, x27, #4
+lsl x18, x27, #3
+lsl x18, x27, #2
+lsl x5, x1, #4
+lsl x2, x18, #2
+lsl x29, x28, #0
+lsl x17, x30, #3
+lsr w28, w16, w5
+lsr wzr, wzr, w22
+lsr w20, w4, w6
+lsr w28, w14, w1
+lsr w11, w1, w28
+lsr w24, w19, w23
+lsr w7, w24, w25
+lsr w13, w27, w11
+lsr w26, w24, w7
+lsr w30, w10, w6
+lsr x8, x6, x22
+lsr x14, x5, x21
+lsr x4, x25, x26
+lsr x10, x22, x8
+lsr x12, x1, x9
+lsr x8, x25, x29
+lsr x0, x1, x21
+lsr x25, x14, x16
+lsr x4, x9, x9
+lsr x11, x7, x19
+lsr w17, w16, #4
+lsr w7, w30, #0
+lsr w29, w2, #1
+lsr w23, w13, #3
+lsr wzr, w25, #2
+lsr w9, w1, #3
+lsr w6, w1, #4
+lsr w27, w26, #4
+lsr w12, w30, #0
+lsr w21, w10, #0
+lsr x8, x27, #1
+lsr x1, x3, #1
+lsr xzr, x0, #4
+lsr x23, x23, #4
+lsr x5, x22, #1
+lsr x21, xzr, #3
+lsr x30, x5, #2
+lsr x8, x1, #4
+lsr x0, x13, #2
+lsr x2, x2, #2
+madd w11, w10, w1, w4
+madd w11, w4, w27, w10
+madd w4, w20, w2, w27
+madd w27, w7, w17, w26
+madd w28, w17, w27, w26
+madd w22, w30, w2, w23
+madd w27, w3, w4, w22
+madd w5, w6, w28, w16
+madd w16, w29, w20, w27
+madd w1, w15, w6, w5
+madd x3, x8, x0, x30
+madd x15, x17, x25, x12
+madd x2, x20, x6, x25
+madd x18, x9, x16, x13
+madd x12, x21, x4, x17
+madd x27, x0, x1, x12
+madd x29, x21, x7, x30
+madd x4, x13, x3, x7
+madd x21, x3, x6, x5
+madd x20, xzr, x17, x23
+mneg w19, w23, w16
+mneg w6, w0, w0
+mneg w19, w12, w21
+mneg w23, w29, w17
+mneg w23, w30, w29
+mneg w20, w19, w4
+mneg w18, w23, w18
+mneg w21, wzr, w7
+mneg w24, w5, w12
+mneg w13, w4, w29
+mneg x4, x23, x21
+mneg x20, x29, x21
+mneg x20, x17, x2
+mneg x10, x8, xzr
+mneg x27, x0, x30
+mneg x24, x20, x17
+mneg x28, x7, x9
+mneg x14, x28, x8
+mneg x22, x21, x13
+mneg x2, x2, x17
+mov w10, w6
+mov w12, w21
+mov w20, w6
+mov w17, w14
+mov w3, w12
+mov w5, wsp
+mov w12, w19
+mov w7, w10
+mov w16, w20
+mov w6, w8
+mov x26, x4
+mov x2, x23
+mov x10, x12
+mov x18, x25
+mov x22, x14
+mov x22, x15
+mov x5, x19
+mov x5, x14
+mov x17, x14
+mov x29, x16
+mov w27, w21
+mov w15, w7
+mov w9, w15
+mov w17, w20
+mov w3, w12
+mov w28, w30
+mov w17, w19
+mov w21, w29
+mov wzr, w2
+mov w23, w14
+mov x16, x1
+mov x29, x5
+mov x20, x1
+mov x19, x13
+mov x16, x16
+mov x29, x11
+mov x6, x13
+mov x18, x15
+mov x28, x3
+mov x3, xzr
+movk w15, #4
+movk w29, #0
+movk w19, #0
+movk w30, #2
+movk w20, #1
+movk w1, #3
+movk w22, #4
+movk w10, #3
+movk w0, #1
+movk w24, #0
+movk w14, #2, lsl #16
+movk w27, #2, lsl #16
+movk w3, #5, lsl #16
+movk w3, #5, lsl #16
+movk w16, #4, lsl #16
+movk w30, #5, lsl #16
+movk w6, #1, lsl #16
+movk w0, #1, lsl #16
+movk w13, #4, lsl #16
+movk w12, #2, lsl #16
+movk x19, #1
+movk x7, #5
+movk x11, #1
+movk x20, #1
+movk x14, #1
+movk x27, #2
+movk x3, #4
+movk x16, #2
+movk x3, #3
+movk x5, #3
+movk x26, #1, lsl #16
+movk x19, #2, lsl #16
+movk x30, #1, lsl #16
+movk x26, #1, lsl #16
+movk x17, #0, lsl #16
+movk x13, #2, lsl #16
+movk x19, #0, lsl #16
+movk x13, #2, lsl #16
+movk x5, #2, lsl #16
+movk x10, #2, lsl #16
+movk x15, #3, lsl #32
+movk x16, #0, lsl #32
+movk x28, #5, lsl #32
+movk x24, #5, lsl #32
+movk x20, #5, lsl #32
+movk x19, #2, lsl #32
+movk x0, #2, lsl #32
+movk x15, #4, lsl #32
+movk x25, #1, lsl #32
+movk x9, #2, lsl #32
+movk x15, #5, lsl #48
+movk x14, #4, lsl #48
+movk x11, #1, lsl #48
+movk x0, #3, lsl #48
+movk x29, #2, lsl #48
+movk x5, #0, lsl #48
+movk x16, #5, lsl #48
+movk x30, #0, lsl #48
+movk x22, #2, lsl #48
+movk x11, #1, lsl #48
+movn w19, #4
+movn w25, #3
+movn w4, #0
+movn w17, #3
+movn w17, #3
+movn w7, #4
+movn w18, #5
+movn w2, #3
+movn w17, #1
+movn w14, #4
+movn w13, #3, lsl #16
+movn w27, #3, lsl #16
+movn w9, #5, lsl #16
+movn w9, #1, lsl #16
+movn w16, #1, lsl #16
+movn w10, #1, lsl #16
+movn w19, #2, lsl #16
+movn w23, #4, lsl #16
+movn w12, #2, lsl #16
+movn w21, #4, lsl #16
+movn x3, #3
+movn x30, #3
+movn x18, #3
+movn x19, #1
+movn x4, #1
+movn x18, #1
+movn x21, #1
+movn x15, #2
+movn x6, #4
+movn x29, #0
+movn x13, #0, lsl #16
+movn x26, #1, lsl #16
+movn x12, #5, lsl #16
+movn x25, #0, lsl #16
+movn x25, #4, lsl #16
+movn x22, #1, lsl #16
+movn x11, #5, lsl #16
+movn x18, #2, lsl #16
 movn x22, #3, lsl #16
-movn x10, #5, lsl #16
-movn x7, #2, lsl #16
-movn x5, #5, lsl #16
-movn x10, #1, lsl #32
-movn x23, #4, lsl #32
-movn x3, #1, lsl #32
-movn x22, #3, lsl #32
-movn x30, #2, lsl #32
-movn x4, #0, lsl #32
-movn x13, #3, lsl #32
-movn x6, #0, lsl #32
-movn x8, #1, lsl #32
-movn x13, #5, lsl #32
-movn x22, #1, lsl #48
-movn x2, #1, lsl #48
-movn x12, #2, lsl #48
-movn x24, #0, lsl #48
-movn xzr, #3, lsl #48
-movn x29, #1, lsl #48
-movn x20, #0, lsl #48
-movn x23, #3, lsl #48
-movn x4, #5, lsl #48
-movn x0, #2, lsl #48
-movz w23, #2
-movz w10, #3
-movz w1, #3
-movz w3, #2
-movz w26, #4
-movz w3, #5
-movz w3, #5
-movz w30, #2
-movz w18, #4
-movz w4, #1
-movz w19, #3, lsl #16
-movz w26, #5, lsl #16
-movz w22, #5, lsl #16
-movz wzr, #4, lsl #16
-movz w30, #1, lsl #16
-movz w28, #3, lsl #16
-movz w4, #1, lsl #16
-movz w26, #5, lsl #16
-movz w24, #5, lsl #16
-movz w15, #4, lsl #16
-movz x14, #0
-movz x3, #1
-movz x24, #5
-movz x1, #0
-movz x23, #1
-movz x27, #4
-movz x7, #1
-movz x18, #5
-movz x6, #5
-movz x23, #0
-movz x16, #1, lsl #16
-movz x25, #0, lsl #16
-movz x26, #4, lsl #16
-movz x26, #0, lsl #16
-movz x17, #5, lsl #16
-movz x5, #3, lsl #16
-movz x28, #0, lsl #16
-movz x17, #4, lsl #16
-movz x10, #4, lsl #16
-movz x30, #5, lsl #16
-movz x24, #3, lsl #32
-movz x12, #1, lsl #32
-movz x14, #0, lsl #32
-movz x28, #4, lsl #32
-movz x15, #1, lsl #32
-movz x24, #1, lsl #32
-movz x6, #1, lsl #32
-movz x20, #1, lsl #32
-movz x5, #2, lsl #32
-movz x19, #1, lsl #32
-movz x23, #4, lsl #48
-movz x22, #5, lsl #48
-movz x1, #1, lsl #48
-movz x7, #1, lsl #48
-movz x26, #3, lsl #48
-movz x12, #4, lsl #48
+movn x1, #4, lsl #16
+movn x7, #1, lsl #32
+movn x11, #2, lsl #32
+movn x0, #0, lsl #32
+movn x26, #5, lsl #32
+movn x19, #3, lsl #32
+movn x29, #0, lsl #32
+movn xzr, #5, lsl #32
+movn x1, #1, lsl #32
+movn x8, #4, lsl #32
+movn x4, #2, lsl #32
+movn x9, #4, lsl #48
+movn xzr, #2, lsl #48
+movn x15, #5, lsl #48
+movn x18, #3, lsl #48
+movn x23, #0, lsl #48
+movn xzr, #4, lsl #48
+movn x7, #5, lsl #48
+movn x26, #4, lsl #48
+movn x5, #2, lsl #48
+movn x15, #0, lsl #48
+movz w11, #0
+movz w25, #3
+movz w4, #4
+movz w22, #2
+movz w21, #0
+movz w14, #4
+movz w21, #3
+movz w18, #0
+movz wzr, #3
+movz w10, #2
+movz w25, #3, lsl #16
+movz w20, #2, lsl #16
+movz w20, #4, lsl #16
+movz w8, #0, lsl #16
+movz w2, #1, lsl #16
+movz w18, #5, lsl #16
+movz w4, #3, lsl #16
+movz w24, #0, lsl #16
+movz w6, #1, lsl #16
+movz w20, #3, lsl #16
+movz x9, #1
+movz x25, #2
+movz x16, #3
+movz x3, #3
+movz x16, #3
+movz x5, #3
+movz x22, #3
+movz x10, #5
+movz x7, #2
+movz x5, #5
+movz x10, #1, lsl #16
+movz x23, #4, lsl #16
+movz x3, #1, lsl #16
+movz x22, #3, lsl #16
+movz x30, #2, lsl #16
+movz x4, #0, lsl #16
+movz x13, #3, lsl #16
+movz x6, #0, lsl #16
+movz x8, #1, lsl #16
+movz x13, #5, lsl #16
+movz x22, #1, lsl #32
+movz x2, #1, lsl #32
+movz x12, #2, lsl #32
+movz x24, #0, lsl #32
+movz xzr, #3, lsl #32
+movz x29, #1, lsl #32
+movz x20, #0, lsl #32
+movz x23, #3, lsl #32
+movz x4, #5, lsl #32
+movz x0, #2, lsl #32
+movz x23, #2, lsl #48
+movz x10, #3, lsl #48
+movz x1, #3, lsl #48
+movz x3, #2, lsl #48
+movz x26, #4, lsl #48
+movz x3, #5, lsl #48
+movz x3, #5, lsl #48
 movz x30, #2, lsl #48
-movz x17, #0, lsl #48
-movz x22, #3, lsl #48
-movz x0, #3, lsl #48
-movi d0, #0
-movi d24, #0
-movi d5, #0
-movi d6, #0
-movi d10, #0
-movi d25, #0
+movz x18, #4, lsl #48
+movz x4, #1, lsl #48
+movi d19, #0
+movi d1, #0
+movi d26, #0
 movi d7, #0
-movi d15, #0
-movi d7, #0
-movi d27, #0
+movi d22, #0
+movi d17, #0
+movi d31, #0
+movi d26, #0
+movi d30, #0
+movi d31, #0
 mrs x1, tpidr_el1
 mrs x1, tpidr_el1
 mrs x1, tpidr_el1
@@ -1695,206 +1655,206 @@ mrs x1, tpidr_el1
 mrs x1, tpidr_el1
 mrs x1, tpidr_el1
 mrs x1, tpidr_el1
-msub w6, w30, w19, w29
-msub w18, w20, w4, w25
-msub wzr, w30, wzr, w12
-msub w16, w29, w4, w1
-msub w10, w27, w14, w10
-msub w0, w14, w3, w5
-msub w21, w13, w30, w28
-msub w28, w5, w23, w3
-msub w4, w11, w0, w22
-msub wzr, w4, w15, wzr
-msub x3, x14, x11, x19
-msub x12, x15, x21, x22
-msub x10, x3, x0, x11
-msub x18, x3, x16, x7
-msub x16, x15, x3, x13
-msub x20, x27, x16, x24
-msub x6, x16, x14, x5
-msub x20, x30, x4, x23
-msub x12, x15, x11, x24
-msub xzr, x0, x14, x9
-mul w3, w15, w20
-mul w21, w18, w5
-mul w28, w3, w20
-mul w0, w16, w8
-mul w27, w0, w1
-mul w1, w16, w15
-mul w6, w4, w13
-mul w11, w28, w26
-mul w26, w7, w18
-mul w25, w7, w1
-mul x3, x10, x16
-mul x23, x0, x2
-mul x28, x28, x5
-mul x16, x28, x21
-mul x25, x23, x21
-mul x26, x24, x5
-mul x9, xzr, x10
-mul x23, x10, x6
-mul x17, x4, x13
-mul x3, x30, x20
-mvn w4, w1
-mvn w30, w20
-mvn w24, w30
-mvn w23, w21
-mvn w27, w28
-mvn w5, w23
-mvn w18, w30
-mvn w15, w7
-mvn w24, w7
-mvn w13, w2
-mvn w6, w23, lsr #0
-mvn w29, w10, lsr #2
-mvn w13, w19, asr #3
-mvn w20, w28, asr #0
-mvn w27, w29, lsr #0
-mvn w26, w7, lsr #0
-mvn w5, w28, ror #1
-mvn w4, w0, lsl #3
-mvn w23, w25, ror #0
-mvn w3, w16, asr #2
-mvn x3, x28
-mvn x2, x23
-mvn x25, x9
-mvn x3, x20
-mvn x6, x5
-mvn x10, x0
-mvn x12, x23
-mvn x12, x17
-mvn x20, x0
-mvn x15, x24
-mvn x0, x15, asr #3
-mvn x8, x29, lsl #4
-mvn x13, x11, lsl #2
-mvn x7, x30, ror #3
-mvn x7, x11, lsl #3
-mvn x16, x30, asr #1
-mvn x22, x27, lsr #4
-mvn x27, x29, asr #4
-mvn x12, x4, ror #2
-mvn x2, x0, lsl #2
-neg w11, w28
-neg w0, w18
-neg w27, w7
-neg w19, w2
-neg w18, w7
-neg w16, w2
-neg w6, wzr
-neg w30, w28
-neg w26, w12
-neg w6, w21
-neg w9, w8, lsr #3
-neg w12, w4, lsl #1
-neg w4, w11, lsr #0
-neg w7, w30, lsl #2
-neg w5, w20, asr #4
-neg w28, w21, lsl #1
-neg w20, w25, lsr #1
-neg w5, w4, lsr #0
-neg w12, w20, lsl #3
-neg w24, w14, lsr #0
-neg x25, x5
-neg x11, x0
-neg x3, x12
-neg x3, x8
-neg x1, x8
-neg x0, x29
-neg x29, x27
-neg xzr, x18
-neg x20, x29
-neg x0, x25
-neg x1, x4, lsr #1
-neg x24, x10, lsl #2
-neg x24, x12, asr #4
-neg x17, x23, asr #2
-neg x3, x21, asr #1
-neg x29, x29, asr #4
-neg x24, x0, asr #4
-neg x29, x13, asr #2
-neg x17, x12, asr #0
-neg x23, x17, asr #3
-negs w29, w5
-negs w1, w15
-negs w28, w19
-negs w3, wzr
-negs w8, w0
-negs w4, w5
-negs w30, w5
-negs wzr, w22
-negs w6, w12
-negs w3, w3
-negs w25, w8, asr #4
-negs w21, w13, lsl #4
-negs w30, w12, lsl #2
-negs w17, w28, lsl #0
-negs w15, w14, lsl #0
-negs w15, w16, lsl #4
-negs w22, w28, lsl #0
-negs w8, w6, asr #0
-negs w15, w1, asr #2
-negs w15, w30, asr #1
-negs x10, x11
-negs x9, x27
-negs x8, x20
-negs x8, x23
-negs x3, x20
-negs x15, x18
-negs x5, x11
-negs xzr, x27
-negs x7, x2
-negs x23, x15
-negs x9, x22, asr #3
-negs x24, x27, lsl #2
-negs x25, x12, lsl #3
-negs x23, x30, asr #1
-negs x18, x6, asr #2
-negs x27, x6, lsr #2
-negs x17, x6, lsr #4
-negs x9, x18, lsr #3
-negs x8, x25, asr #2
-negs x20, x6, lsr #0
-ngc w18, w28
-ngc w17, w9
-ngc w26, w16
-ngc w9, w12
-ngc w22, w0
-ngc w2, w17
-ngc w6, w9
-ngc w17, w23
-ngc w16, w12
-ngc w16, w25
-ngc x30, x25
-ngc x11, x7
-ngc x18, x21
-ngc x7, x6
-ngc x27, x15
-ngc x20, x13
-ngc x11, x6
-ngc x22, x5
-ngc x22, xzr
-ngc x17, x12
-ngcs wzr, w19
-ngcs w30, w5
-ngcs w29, w15
-ngcs w29, w13
-ngcs w28, w13
-ngcs w6, w26
-ngcs w6, w17
-ngcs w1, w24
-ngcs w6, w9
-ngcs wzr, w1
-ngcs x24, x19
-ngcs x14, x3
-ngcs x25, x4
-ngcs x8, x15
-ngcs x4, x25
-ngcs x28, x3
-ngcs x13, x26
-ngcs x9, x10
-ngcs x9, x6
-ngcs x23, x5
+msub w28, w21, w4, w7
+msub w26, w5, w24, w29
+msub w15, w18, w14, w18
+msub w3, w17, w24, w1
+msub w1, w10, w23, w5
+msub w27, w10, w7, w21
+msub w18, w29, w6, w17
+msub w23, w4, w16, w19
+msub w25, w20, w26, w20
+msub w26, w18, w17, w9
+msub x5, xzr, x28, x8
+msub x17, x20, x10, x18
+msub x30, x1, x24, x25
+msub x12, xzr, x14, x30
+msub x28, x20, x15, x19
+msub x24, xzr, x6, x17
+msub x20, x1, x5, x14
+msub x19, x23, x23, x24
+msub x22, x19, x1, x7
+msub x7, x11, x26, x5
+mul w12, w18, w30
+mul w24, w17, w12
+mul w22, w13, w0
+mul w5, w0, w24
+mul w5, w6, w10
+mul w25, w7, w15
+mul w7, w27, w6
+mul w30, w19, w29
+mul w18, w20, w4
+mul w25, wzr, w30
+mul xzr, x12, x16
+mul x29, x4, x1
+mul x10, x27, x14
+mul x10, x0, x14
+mul x3, x5, x21
+mul x13, x30, x28
+mul x28, x5, x23
+mul x3, x4, x11
+mul x0, x22, xzr
+mul x4, x15, xzr
+mvn w3, w14
+mvn w11, w19
+mvn w12, w15
+mvn w21, w22
+mvn w10, w3
+mvn w0, w11
+mvn w18, w3
+mvn w16, w7
+mvn w16, w15
+mvn w3, w13
+mvn w20, w27, lsl #0
+mvn w6, w16, asr #1
+mvn w20, w30, lsl #4
+mvn w12, w15, ror #1
+mvn wzr, w0, asr #1
+mvn w3, w15, lsl #2
+mvn w18, w5, lsl #2
+mvn w20, w0, lsl #3
+mvn w27, w0, lsr #0
+mvn w16, w15, asr #0
+mvn x13, x11
+mvn x28, x26
+mvn x26, x7
+mvn x18, x25
+mvn x7, x1
+mvn x3, x10
+mvn x16, x23
+mvn x0, x2
+mvn x28, x28
+mvn x5, x16
+mvn x28, x21, lsr #3
+mvn x21, x26, lsl #1
+mvn x9, xzr, asr #2
+mvn x10, x6, lsr #4
+mvn x13, x3, asr #3
+mvn x4, x1, asr #0
+mvn x24, x30, ror #1
+mvn x27, x28, lsr #1
+mvn x18, x30, ror #3
+mvn x24, x7, lsr #4
+neg w6, w23
+neg w25, w16
+neg w29, w10
+neg w21, w10
+neg w13, w19
+neg w30, w18
+neg w20, w28
+neg w6, w12
+neg w27, w29
+neg w1, w22
+neg w26, w7, lsr #0
+neg w5, w28, asr #1
+neg w4, w0, asr #3
+neg w23, w25, lsl #0
+neg w3, w16, lsr #2
+neg w3, w28, lsr #2
+neg w25, w9, lsr #0
+neg w6, w5, lsl #1
+neg w12, w23, lsr #3
+neg w20, w0, asr #3
+neg x0, x15
+neg x2, x24
+neg x8, x29
+neg x12, x11
+neg x13, x11
+neg x28, x16
+neg x7, x30
+neg x7, x0
+neg x7, x11
+neg x20, x14
+neg x16, x30, lsr #1
+neg x22, x27, lsr #4
+neg x27, x29, lsl #4
+neg x12, x4, lsl #2
+neg x2, x0, lsl #2
+neg x11, x28, lsl #3
+neg x27, x7, lsl #4
+neg x18, x7, asr #2
+neg x6, xzr, lsl #4
+neg x26, x12, asr #4
+negs w9, w8
+negs w16, w21
+negs w12, w4
+negs w10, w14
+negs w4, w11
+negs w30, w15
+negs w7, w30
+negs w1, w2
+negs w5, w20
+negs w5, w24
+negs w28, w21, lsl #1
+negs w20, w25, lsr #1
+negs w5, w4, lsr #0
+negs w12, w20, lsl #3
+negs w24, w14, lsr #0
+negs w25, w5, lsr #4
+negs w3, w12, lsl #3
+negs w1, w8, asr #3
+negs w29, w27, lsl #4
+negs w20, w29, asr #4
+negs x1, x4
+negs x7, x13
+negs x24, x10
+negs x5, x16
+negs x24, x12
+negs x12, x17
+negs x17, x23
+negs x18, x20
+negs x3, x21
+negs x29, x4
+negs x29, x29, asr #4
+negs x24, x0, asr #4
+negs x29, x13, asr #2
+negs x17, x12, asr #0
+negs x23, x17, asr #3
+negs x29, x5, lsl #4
+negs x28, x19, lsl #2
+negs x8, x0, asr #3
+negs x30, x5, lsl #0
+negs x6, x12, lsr #2
+ngc w25, w8
+ngc w2, w10
+ngc w21, w13
+ngc w19, w12
+ngc w30, w12
+ngc w27, w28
+ngc w17, w28
+ngc w11, w13
+ngc w15, w14
+ngc w12, w23
+ngc x15, x16
+ngc x28, x13
+ngc x22, x28
+ngc x3, x28
+ngc x8, x6
+ngc xzr, x1
+ngc x15, x1
+ngc x11, x4
+ngc x15, x30
+ngc x16, x13
+ngcs w10, w11
+ngcs w9, w27
+ngcs w8, w20
+ngcs w8, w23
+ngcs w3, w20
+ngcs w15, w18
+ngcs w5, w11
+ngcs wzr, w27
+ngcs w7, w2
+ngcs w23, w15
+ngcs x9, x22
+ngcs x16, x24
+ngcs x24, x27
+ngcs x28, x7
+ngcs x25, x12
+ngcs x20, x3
+ngcs x23, x30
+ngcs x30, xzr
+ngcs x18, x6
+ngcs x23, x21
 nop
 nop
 nop
@@ -1905,396 +1865,376 @@ nop
 nop
 nop
 nop
-orn w19, w29, w0
-orn w26, w14, w1
-orn w18, w20, w10
-orn w17, w21, w2
-orn w5, w3, w5
-orn w30, w7, w13
-orn w14, w11, w7
-orn w10, w15, w20
-orn w4, w24, w30
-orn w13, w30, w21
-orn w19, w17, w18, ror #4
-orn w0, w20, w30, lsl #3
-orn w15, w9, w1, lsl #3
-orn w7, w19, w19, lsl #4
-orn wzr, w27, w11, asr #0
-orn w15, w6, w13, lsl #2
-orn w2, w15, w21, lsl #1
-orn w1, w20, w23, ror #0
-orn w22, w14, w17, ror #0
-orn w29, w30, w22, lsr #0
-orn x23, x16, x14
-orn x2, x30, x30
-orn x17, x4, x11
-orn x13, x8, x14
-orn x29, x29, x2
-orn xzr, x30, x23
-orn x22, x29, xzr
-orn x12, x12, x17
-orn x4, x15, x14
-orn x2, x5, xzr
-orn x21, x28, x15, lsl #3
-orn x13, x2, x15, lsr #0
-orn x28, x25, x27, lsr #1
-orn x30, x25, x21, lsr #3
-orn x19, x20, x28, ror #3
-orn x0, x14, x20, asr #1
-orn x19, x24, x15, ror #0
-orn x13, x16, x30, lsl #4
-orn x11, x24, x27, ror #0
-orn x18, x5, x11, lsl #4
-orr v26.8b, v27.8b, v14.8b
-orr v22.8b, v26.8b, v20.8b
-orr v22.8b, v8.8b, v8.8b
-orr v25.8b, v27.8b, v27.8b
-orr v17.8b, v10.8b, v30.8b
-orr v13.8b, v23.8b, v15.8b
-orr v11.8b, v19.8b, v17.8b
-orr v22.8b, v11.8b, v12.8b
-orr v29.8b, v29.8b, v31.8b
-orr v2.8b, v8.8b, v7.8b
-orr v28.16b, v3.16b, v2.16b
-orr v11.16b, v25.16b, v28.16b
-orr v31.16b, v16.16b, v4.16b
-orr v7.16b, v9.16b, v31.16b
-orr v2.16b, v26.16b, v9.16b
-orr v1.16b, v7.16b, v0.16b
-orr v16.16b, v18.16b, v19.16b
-orr v1.16b, v8.16b, v30.16b
-orr v13.16b, v6.16b, v28.16b
-orr v12.16b, v8.16b, v4.16b
-orr w6, w5, #0x10101010
-orr w19, w16, #0x10101010
-orr w30, w15, #0x10101010
-orr w30, w22, #0x10101010
-orr w15, w24, #0x10101010
-orr w9, w25, #0x10101010
-orr w7, w9, #0x10101010
-orr w10, w10, #0x10101010
-orr w21, w24, #0x10101010
-orr w21, w4, #0x10101010
-orr x15, x24, #0x1010101010101010
+orn w27, w6, w7
+orn w0, w17, w6
+orn w27, w25, w9
+orn w18, w8, w18
+orn w8, w25, w10
+orn w0, w20, w6
+orn w7, w14, w18
+orn w28, w17, w9
+orn w26, w16, w9
+orn w12, w22, w0
+orn w2, w17, w6, lsr #1
+orn w23, w16, w12, lsl #3
+orn w30, w25, w11, ror #1
+orn w21, w7, w6, ror #0
+orn w20, w13, w11, asr #4
+orn w5, w22, wzr, lsr #3
+orn wzr, w19, w30, lsr #1
+orn w15, w29, w13, lsl #0
+orn w6, w26, w6, lsr #0
+orn w24, w6, w9, ror #3
+orn x24, x19, x14
+orn x3, x25, x4
+orn x8, x15, x4
+orn x25, x28, x3
+orn x13, x26, x9
+orn x10, x9, x6
+orn x23, x5, x19
+orn x29, x0, x26
+orn x14, x1, x18
+orn x20, x10, x17
+orn x21, x2, x5, ror #3
+orn x30, x7, x13, asr #3
+orn x7, x10, x15, lsl #4
+orn x24, x30, x13, asr #0
+orn x19, x17, x18, ror #4
+orn x0, x20, x30, lsl #3
+orn x15, x9, x1, lsl #3
+orn x7, x19, x19, lsl #4
+orn xzr, x27, x11, asr #0
+orn x15, x6, x13, lsl #2
+orr w25, w15, #0x10101010
+orr w26, w2, #0x10101010
+orr w7, w23, #0x10101010
+orr w26, w22, #0x10101010
+orr w26, w23, #0x10101010
+orr w9, w30, #0x10101010
+orr w1, w19, #0x10101010
+orr w18, w14, #0x10101010
+orr w16, w30, #0x10101010
+orr w2, w11, #0x10101010
+orr x23, x14, #0x1010101010101010
+orr x20, x2, #0x1010101010101010
+orr x22, x23, #0x1010101010101010
+orr x20, xzr, #0x1010101010101010
+orr x12, x17, #0x1010101010101010
+orr x8, x14, #0x1010101010101010
+orr x9, xzr, #0x1010101010101010
+orr x26, x15, #0x1010101010101010
 orr x6, x13, #0x1010101010101010
-orr x17, xzr, #0x1010101010101010
-orr x29, x20, #0x1010101010101010
-orr x2, x9, #0x1010101010101010
-orr x7, x6, #0x1010101010101010
-orr x3, x4, #0x1010101010101010
-orr x4, x20, #0x1010101010101010
-orr x12, x3, #0x1010101010101010
-orr x3, x14, #0x1010101010101010
-orr w20, w30, w24
-orr w29, w21, w6
-orr w22, w13, w5
-orr w30, w22, w25
-orr w28, w25, w2
-orr w18, w16, w9
-orr w2, w2, w13
-orr w28, w1, w1
-orr w0, w21, w5
-orr w28, w5, w19
-orr w28, w25, w17, lsr #1
-orr w6, w27, w12, ror #0
-orr w10, w9, w25, asr #3
-orr w28, w25, w18, lsr #1
-orr w20, w18, w23, lsr #3
-orr w23, w11, w24, ror #2
-orr w12, w16, w10, lsr #3
-orr w0, w4, w0, lsr #1
-orr w0, w23, w1, lsr #3
-orr w3, w21, w23, asr #0
-orr x18, x10, x12
-orr x10, x0, x0
-orr x1, x11, x24
-orr x21, x27, x4
-orr x5, x5, x2
-orr x10, x6, x6
-orr x10, x19, x29
-orr x10, x10, x30
-orr x3, x8, x2
-orr x25, xzr, x24
-orr x19, x18, x2, lsl #1
-orr x2, x0, x29, lsr #2
-orr x18, x9, x29, ror #3
-orr xzr, x1, x20, lsr #0
-orr x7, x2, x21, asr #3
-orr x25, x26, x3, asr #3
-orr x27, x5, x12, lsr #4
-orr x8, x0, x5, lsr #4
-orr x30, x24, x22, ror #4
-orr x5, x26, x17, lsr #0
-rbit w28, w1
-rbit w1, w18
-rbit w19, w2
-rbit w11, w13
-rbit w5, w29
-rbit w7, w0
-rbit w2, w19
-rbit w30, w8
-rbit w27, w30
-rbit w13, w1
-rbit x11, x11
-rbit x25, x2
-rbit x6, x8
-rbit x7, x0
-rbit x25, x0
-rbit xzr, x22
+orr x2, x17, #0x1010101010101010
+orr w28, w25, w27
+orr w25, w23, w30
+orr w25, w21, w21
+orr w15, w19, w20
+orr w28, wzr, w5
+orr w0, w14, w20
+orr w2, w19, w19
+orr w24, w15, w3
+orr w28, w13, w16
+orr w30, w28, w2
+orr w11, w24, w27, ror #0
+orr w18, w5, w11, lsl #4
+orr w26, w27, w14, asr #0
+orr w20, w22, w8, lsl #0
+orr w27, w27, w17, asr #2
+orr w13, w23, w15, ror #3
+orr w17, w22, w11, lsl #3
+orr w29, wzr, w2, lsl #1
+orr w28, w3, w2, ror #1
+orr w28, wzr, w16, lsl #2
+orr x9, xzr, x2
+orr x26, x9, x1
+orr x7, x0, x16
+orr x18, x19, x1
+orr x8, x30, x13
+orr x6, x28, x12
+orr x8, x4, x19
+orr x5, x7, x21
+orr x16, x1, x17
+orr x15, x17, x21
+orr x22, x26, x20, lsl #1
+orr x29, x25, x27, lsr #3
+orr x13, x16, x10, lsr #1
+orr x24, x27, x11, lsl #2
+orr x15, x24, x9, ror #4
+orr x25, x24, xzr, lsl #4
+orr x20, x30, x3, lsr #4
+orr x23, x6, x16, asr #3
+orr x25, xzr, x20, lsl #1
+orr x3, x28, x16, asr #1
+rbit w20, w30
+rbit w24, w29
+rbit w21, w6
+rbit w22, w13
+rbit w5, w30
+rbit w22, w25
+rbit w28, w25
+rbit w2, w18
+rbit w16, w9
+rbit w2, w2
+rbit x13, x28
 rbit x1, x1
-rbit x8, x20
-rbit x3, x19
-rbit x2, x9
-rev w16, w9
-rev w9, w18
-rev w29, w7
-rev w26, w24
-rev w5, w8
-rev w25, w17
-rev w19, w18
-rev w19, w26
-rev w27, w26
-rev w26, w20
-rev x26, x26
-rev x10, x28
-rev x27, x18
-rev x16, x30
-rev x5, x18
-rev x7, x21
-rev x28, x17
-rev x8, x25
-rev x24, x2
-rev x17, x30
-rev16 w10, w11
-rev16 w15, w30
-rev16 w29, w2
-rev16 w24, w24
-rev16 w28, w18
-rev16 w13, w22
-rev16 w12, w23
-rev16 w18, w7
-rev16 w10, w3
-rev16 w6, w15
-rev16 x21, x13
-rev16 x5, x17
-rev16 x30, x13
-rev16 x10, x23
-rev16 x15, x28
-rev16 x21, x26
-rev16 x7, x4
-rev16 x24, x4
-rev16 x6, x16
-rev16 x29, x2
-rev32 x2, x10
-rev32 x24, x15
-rev32 x1, x11
-rev32 x22, x11
-rev32 x14, x28
-rev32 x27, x3
-rev32 x10, x0
-rev32 x21, x8
-rev32 x13, xzr
-rev32 xzr, x28
-ror w27, w20, #2
-ror w2, w24, #4
-ror w7, w30, #1
-ror w4, w0, #1
-ror w14, w25, #1
-ror w15, w4, #3
-ror w27, w18, #0
-ror w22, w21, #2
-ror w22, w10, #2
-ror w3, w10, #2
-ror xzr, x5, #3
-ror x22, x8, #4
-ror x4, x15, #1
-ror x3, x19, #4
-ror x4, x1, #2
-ror x20, x16, #4
-ror x26, x11, #4
-ror x29, x1, #0
-ror x10, x23, #4
-ror x0, x26, #0
-ror w21, w26, wzr
-ror w30, w16, w7
-ror w0, w20, w22
-ror w1, w23, w9
-ror w2, w27, w10
-ror w28, w15, w27
-ror w26, w10, w6
-ror w10, w7, w8
-ror w15, w18, wzr
-ror wzr, w18, w26
-ror x25, x7, x20
-ror x25, x5, x4
-ror x0, x6, x24
-ror x23, x7, x16
-ror x0, x9, x11
-ror x11, x5, x27
-ror x6, xzr, x5
-ror x12, x9, x12
-ror x20, x24, x30
-ror x20, x24, x16
-sbc w14, w17, w23
-sbc w2, w10, w29
-sbc w6, w11, w3
-sbc w30, w2, w10
-sbc w14, w2, w19
-sbc w26, w13, w24
-sbc w21, w19, w23
-sbc w26, w0, w0
-sbc w6, w20, w24
-sbc w5, w8, w16
-sbc x21, x22, x2
-sbc x13, x24, x12
-sbc x10, x30, x23
-sbc x13, x29, x25
-sbc x23, x11, x28
-sbc x10, x5, x9
-sbc x2, x26, x29
-sbc x25, x20, x29
-sbc x25, x27, x17
-sbc x17, x0, x26
-sbcs w2, w21, w16
-sbcs w4, w2, w9
-sbcs w16, w12, w7
-sbcs w8, w25, w4
-sbcs w1, w16, w16
-sbcs w29, w26, w21
-sbcs w7, w28, w16
-sbcs w4, w21, w4
-sbcs w1, w14, wzr
-sbcs w18, w0, wzr
-sbcs x12, x2, x21
-sbcs x29, x6, x23
-sbcs x6, x22, x4
-sbcs x13, x30, x29
-sbcs x18, x0, x14
-sbcs x2, x29, x8
-sbcs x23, x4, x5
-sbcs x7, x8, x26
-sbcs x12, x9, x9
-sbcs x11, x28, x9
-sbfiz w11, w8, #4, #1
-sbfiz w5, w17, #4, #4
-sbfiz w7, w27, #2, #3
-sbfiz w25, w11, #3, #4
-sbfiz w13, w3, #4, #1
-sbfiz w8, w20, #1, #1
-sbfiz w15, w24, #3, #1
-sbfiz w3, w22, #2, #3
-sbfiz w30, w12, #3, #1
-sbfiz w29, w6, #4, #1
-sbfiz x1, x8, #3, #3
-sbfiz x19, x16, #2, #1
-sbfiz x20, x17, #2, #1
-sbfiz x5, x17, #1, #1
-sbfiz x9, x6, #1, #1
-sbfiz x28, x13, #4, #4
-sbfiz x25, x9, #4, #3
-sbfiz x15, x14, #4, #2
-sbfiz x23, x5, #4, #3
-sbfiz x22, x13, #4, #3
-sbfm w30, w16, #4, #0
-sbfm w1, w18, #3, #0
-sbfm w25, w4, #4, #2
-sbfm w18, w17, #1, #3
-sbfm w27, w15, #3, #2
-sbfm w30, w29, #0, #0
-sbfm w2, w7, #3, #0
-sbfm w20, w10, #0, #2
-sbfm w26, w8, #2, #3
-sbfm w27, w13, #3, #3
-sbfm x18, x28, #0, #1
-sbfm x13, x26, #4, #3
-sbfm x9, x17, #3, #1
-sbfm x14, x14, #1, #3
-sbfm x21, x28, #3, #3
-sbfm x6, x12, #2, #2
-sbfm x20, x17, #0, #1
-sbfm x30, x2, #4, #2
-sbfm x30, x13, #3, #3
-sbfm x7, x4, #4, #4
-sbfx w21, w7, #1, #1
-sbfx w21, w20, #2, #4
-sbfx w16, w30, #1, #4
-sbfx w10, w16, #1, #4
-sbfx w1, w20, #3, #4
-sbfx w22, w18, #1, #1
-sbfx wzr, w4, #1, #3
-sbfx w8, w20, #3, #3
-sbfx w27, w14, #3, #1
-sbfx w3, w23, #4, #4
-sbfx x21, x16, #3, #1
-sbfx x0, x2, #4, #2
-sbfx x23, x13, #1, #2
-sbfx xzr, x16, #3, #3
-sbfx x21, x2, #1, #2
-sbfx x22, x27, #4, #2
-sbfx x9, x29, #2, #1
-sbfx x20, x29, #1, #3
-sbfx x13, x10, #3, #2
-sbfx x13, x9, #3, #1
-scvtf s22, w18
-scvtf s17, w9
-scvtf s31, w29
-scvtf s20, w20
-scvtf s21, w22
-scvtf s17, w7
-scvtf s20, w28
-scvtf s28, w25
-scvtf s10, w1
-scvtf s10, w15
-scvtf d27, w12
-scvtf d9, w16
-scvtf d20, w17
-scvtf d21, w24
-scvtf d28, w30
-scvtf d5, w23
-scvtf d17, w23
-scvtf d8, w30
-scvtf d10, w0
-scvtf d4, w23
-scvtf s22, x7
-scvtf s11, x12
-scvtf s3, x26
-scvtf s7, x19
-scvtf s6, x16
-scvtf s12, x28
-scvtf s27, x8
-scvtf s9, x10
-scvtf s8, x21
-scvtf s17, x0
-scvtf d1, x4
-scvtf d23, x4
-scvtf d14, x21
+rbit x0, x21
+rbit x5, x28
+rbit x5, x19
+rbit x28, x25
+rbit x17, x21
+rbit x22, x6
+rbit x27, x12
+rbit x19, x0
+rev w10, w9
+rev w25, w6
+rev w2, w28
+rev w25, w18
+rev w5, w27
+rev w20, w18
+rev w23, w21
+rev w19, w23
+rev w11, w24
+rev w19, w16
+rev x12, x16
+rev x10, x29
+rev x5, x0
+rev x4, x0
+rev x13, x23
+rev x0, x23
+rev x1, x25
+rev x30, x3
+rev x21, x23
+rev x22, x26
+rev16 w18, w10
+rev16 w12, w10
+rev16 w0, w0
+rev16 w1, w11
+rev16 w24, w21
+rev16 w27, w4
+rev16 w5, w5
+rev16 w2, w10
+rev16 w6, w6
+rev16 w10, w19
+rev16 x29, x10
+rev16 x10, x30
+rev16 x3, x8
+rev16 x2, x25
+rev16 xzr, x24
+rev16 x19, x18
+rev16 x2, x0
+rev16 x28, x2
+rev16 x0, x29
+rev16 x13, x24
+rev32 x18, x9
+rev32 x29, x23
+rev32 x14, xzr
+rev32 x1, x20
+rev32 x5, x11
+rev32 x7, x2
+rev32 x21, x18
+rev32 x1, x25
+rev32 x26, x3
+rev32 x18, x26
+ror w27, w5, #2
+ror w29, w5, #0
+ror w0, w5, #4
+ror w13, w30, #4
+ror w22, w27, #4
+ror w5, w26, #4
+ror w25, wzr, #4
+ror w1, w1, #0
+ror w19, w2, #4
+ror w13, w5, #2
+ror x7, x0, #4
+ror x19, x30, #4
+ror x27, x30, #3
+ror x1, x11, #0
+ror x25, x2, #3
+ror x8, x7, #3
+ror x25, x0, #3
+ror x22, x1, #0
+ror x8, x20, #2
+ror x19, x2, #3
+ror w16, w9, w9
+ror w18, w29, w7
+ror w26, w24, w5
+ror w8, w25, w17
+ror w19, w18, w19
+ror w26, w27, w26
+ror w26, w20, w26
+ror w26, w10, w28
+ror w27, w18, w16
+ror w30, w5, w18
+ror x7, x21, x28
+ror x17, x8, x25
+ror x24, x2, x17
+ror x30, x10, x11
+ror x15, x30, x29
+ror x2, x24, x24
+ror x28, x18, x13
+ror x22, x12, x23
+ror x18, x7, x10
+ror x3, x6, x15
+sbc w21, w13, w5
+sbc w17, w30, w13
+sbc w10, w23, w15
+sbc w28, w21, w26
+sbc w7, w4, w24
+sbc w4, w6, w16
+sbc w29, w2, w2
+sbc w10, w24, w15
+sbc w1, w11, w22
+sbc w11, w14, w28
+sbc x27, x3, x10
+sbc x0, x21, x8
+sbc x13, xzr, xzr
+sbc x28, x27, x20
+sbc x22, x2, x24
+sbc x14, x7, x30
+sbc x30, x4, x0
+sbc x1, x14, x25
+sbc x16, x15, x4
+sbc x6, x27, x18
+sbcs w3, w22, w21
+sbcs w13, w22, w10
+sbcs w21, w3, w10
+sbcs w21, wzr, w5
+sbcs w9, w22, w8
+sbcs w2, w4, w15
+sbcs w0, w3, w19
+sbcs w1, w4, w1
+sbcs w26, w20, w16
+sbcs w30, w26, w11
+sbcs x16, x29, x1
+sbcs x5, x10, x23
+sbcs x16, x0, x26
+sbcs x26, x21, x26
+sbcs xzr, x30, x16
+sbcs x7, x0, x20
+sbcs x22, x1, x23
+sbcs x9, x2, x27
+sbcs x10, x28, x15
+sbcs x27, x26, x10
+sbfiz w6, w10, #4, #1
+sbfiz w15, w18, #4, #4
+sbfiz w18, w26, #2, #4
+sbfiz w20, w25, #2, #1
+sbfiz w0, w6, #1, #4
+sbfiz w7, w16, #1, #2
+sbfiz w11, w11, #2, #4
+sbfiz w6, wzr, #2, #1
+sbfiz w9, w12, #1, #1
+sbfiz w30, w20, #1, #1
+sbfiz x14, x17, #4, #3
+sbfiz x10, x29, #3, #4
+sbfiz x3, x30, #3, #3
+sbfiz x14, x2, #4, #3
+sbfiz x13, x24, #2, #4
+sbfiz x23, x26, #1, #1
+sbfiz x6, x20, #1, #2
+sbfiz x8, x16, #2, #3
+sbfiz x2, x13, #1, #1
+sbfiz x10, x30, #4, #2
+sbfm w29, w25, #2, #2
+sbfm w28, w10, #1, #1
+sbfm w2, w26, #0, #0
+sbfm w20, w29, #2, #3
+sbfm w17, w17, #0, #1
+sbfm w2, w21, #3, #2
+sbfm w2, w9, #0, #0
+sbfm w7, w8, #3, #4
+sbfm w1, w16, #2, #0
+sbfm w26, w21, #2, #0
+sbfm x16, x4, #2, #1
+sbfm x1, x14, #1, #0
+sbfm x0, xzr, #3, #1
+sbfm x21, x29, #3, #4
+sbfm x6, x22, #0, #0
+sbfm x30, x29, #0, #3
+sbfm x14, x2, #0, #0
+sbfm x23, x4, #1, #2
+sbfm x8, x26, #1, #4
+sbfm x9, x11, #2, #1
+sbfx w11, w8, #4, #1
+sbfx w5, w17, #4, #4
+sbfx w7, w27, #2, #3
+sbfx w25, w11, #3, #4
+sbfx w13, w3, #4, #1
+sbfx w8, w20, #1, #1
+sbfx w15, w24, #3, #1
+sbfx w3, w22, #2, #3
+sbfx w30, w12, #3, #1
+sbfx w29, w6, #4, #1
+sbfx x1, x8, #3, #3
+sbfx x19, x16, #2, #1
+sbfx x20, x17, #2, #1
+sbfx x5, x17, #1, #1
+sbfx x9, x6, #1, #1
+sbfx x28, x13, #4, #4
+sbfx x25, x9, #4, #3
+sbfx x15, x14, #4, #2
+sbfx x23, x5, #4, #3
+sbfx x22, x13, #4, #3
+scvtf s30, w3
+scvtf s6, w6
+scvtf s1, w14
+scvtf s24, w0
+scvtf s25, w30
+scvtf s22, w11
+scvtf s18, w3
+scvtf s16, w4
+scvtf s27, w5
+scvtf s2, w24
+scvtf d30, w19
+scvtf d27, w29
+scvtf d2, w16
+scvtf d31, w26
+scvtf d20, w26
+scvtf d2, w0
+scvtf d26, w15
+scvtf d21, w3
+scvtf d27, w10
+scvtf d5, w20
+scvtf s18, x22
+scvtf s9, x1
+scvtf s13, x7
+scvtf s15, x29
+scvtf s9, x20
+scvtf s19, x16
+scvtf s14, x7
+scvtf s28, x8
+scvtf s21, x24
+scvtf s9, x27
+scvtf d6, x29
+scvtf d27, x16
+scvtf d20, x30
+scvtf d28, x8
+scvtf d30, x23
 scvtf d3, x15
-scvtf d28, x17
-scvtf d24, x10
-scvtf d29, x5
-scvtf d28, x22
-scvtf d12, x25
-scvtf d14, x23
-sdiv w21, w26, w19
-sdiv w17, w16, w28
-sdiv w1, w24, w26
-sdiv w18, w29, w27
-sdiv w9, w20, w13
-sdiv w23, w19, w16
-sdiv w16, w16, w24
-sdiv w8, w2, w21
-sdiv w12, wzr, w22
-sdiv w24, w3, w4
-sdiv x10, x24, x30
-sdiv x29, x9, x14
-sdiv x25, x10, x7
-sdiv x19, x29, x4
-sdiv x14, x6, x24
-sdiv x28, x30, x11
-sdiv x12, x14, x27
-sdiv x4, x22, x30
-sdiv x26, x3, x29
-sdiv x16, x27, x0
+scvtf d30, x27
+scvtf d20, x4
+scvtf d7, x20
+scvtf d20, x11
+sdiv w21, w7, w24
+sdiv w4, w21, w20
+sdiv w21, w11, w16
+sdiv w30, w20, w23
+sdiv w10, w16, w24
+sdiv wzr, w1, w20
+sdiv w14, wzr, w22
+sdiv w18, w16, w20
+sdiv wzr, w4, w0
+sdiv w6, w8, w20
+sdiv x22, x30, x27
+sdiv x14, x2, x16
+sdiv x3, x23, x27
+sdiv x19, x21, x16
+sdiv x10, x0, x0
+sdiv x2, xzr, x1
+sdiv x23, x13, x0
+sdiv x13, xzr, x16
+sdiv x2, x30, x21
+sdiv x2, x4, x29
 fcvtzs w9, s1
 fcvtzs w9, s1
 fcvtzs w9, s1
@@ -2375,636 +2315,596 @@ fcvtzu x9, d1
 fcvtzu x9, d1
 fcvtzu x9, d1
 fcvtzu x9, d1
-smaddl x20, w6, w24, x18
-smaddl x3, w2, w1, x29
-smaddl x12, w8, w16, x9
-smaddl x12, wzr, w16, x4
-smaddl x27, w14, w15, x7
-smaddl x28, w11, w12, x18
-smaddl x9, w6, w21, x6
-smaddl x22, w17, w6, x10
-smaddl x23, w30, w28, x26
-smaddl x0, w29, w23, x13
-smnegl x5, w8, w22
-smnegl x17, w7, w6
-smnegl x21, w2, w20
-smnegl x5, w9, w16
-smnegl x16, w21, w3
-smnegl x25, w27, w24
-smnegl xzr, w17, w9
-smnegl x5, w27, w0
-smnegl x3, w24, w27
-smnegl x4, w21, w18
-smsubl x17, w27, w26, x7
-smsubl x12, w1, w14, x2
-smsubl x3, w2, w7, x13
-smsubl x19, w23, w2, x22
-smsubl x16, w30, w14, x15
-smsubl x15, w24, w20, x11
-smsubl x24, w23, w3, x19
-smsubl x27, w24, w6, x12
-smsubl x19, w0, w20, x0
-smsubl x2, w2, w2, x5
-smulh x4, x9, x18
-smulh x23, x0, x21
-smulh x13, x16, x19
-smulh x28, xzr, x2
-smulh x20, x19, x13
-smulh x12, x10, x16
-smulh x0, x6, x9
-smulh x6, x18, x28
-smulh x6, x6, x28
-smulh x8, x8, x30
-smull x14, w13, w7
-smull x0, w4, w7
-smull x21, w18, w23
-smull x8, w14, w22
-smull x11, w2, w9
-smull x24, w14, w20
-smull x9, w14, w26
-smull x18, w20, w12
-smull x14, w27, w19
-smull x11, w3, w27
-sub w26, w17, w8
-sub w16, w18, w13
-sub w12, w7, wzr
-sub w1, w16, w13
-sub w5, w27, w15
-sub w15, w19, w29
-sub w2, w28, w12
-sub w13, w14, w0
-sub w20, w29, w27
-sub w9, w8, wzr
-sub w29, w17, w16, uxth #3
-sub w23, w14, w27, uxtw #1
-sub w28, w26, w26, uxth #3
-sub w16, w1, w8, sxtx #0
-sub w0, w19, w3, uxtx #1
-sub w18, w16, w15, uxtx #2
-sub w29, w4, w10, sxtw #0
-sub w28, w1, w20, sxtx #4
-sub w20, w18, w5, sxtb #3
-sub w19, w6, w5, uxtw #2
-sub x26, x7, x0
-sub x23, x27, x19
-sub x10, x11, x2
-sub x5, x4, x16
-sub x26, x14, x15
-sub x18, x26, x16
-sub x8, x2, x27
-sub x26, x20, x0
-sub x7, x24, x26
-sub x1, x30, x28
-sub x16, x9, x4, uxtx #1
-sub x0, x12, x20, uxtx #0
-sub x6, x14, xzr, uxtx #4
-sub x10, x27, x23, uxtx #1
-sub x16, x25, x11, sxtx #3
-sub x24, x6, x19, uxtx #4
-sub x24, x20, x13, sxtx #1
-sub x25, x18, x25, uxtx #2
-sub x19, x20, x11, uxtx #2
-sub x23, x20, x24, sxtx #4
-sub w14, w24, #1
-sub w0, w5, #2
-sub w24, w11, #5
-sub w17, w15, #5
-sub w29, w28, #0
-sub w5, w1, #5
-sub w28, w25, #0
-sub w16, w14, #5
-sub w3, w11, #1
-sub w1, w3, #2
-sub w11, w29, #4, lsl #12
-sub w22, w2, #0, lsl #12
-sub w24, w23, #3, lsl #12
-sub w24, w9, #3, lsl #12
-sub w16, w15, #5, lsl #12
-sub w15, w2, #4, lsl #12
-sub w22, w14, #4, lsl #12
-sub w13, w1, #4, lsl #12
-sub w26, w27, #1, lsl #12
-sub w30, w10, #2, lsl #12
-sub x20, x11, #1
-sub x14, x23, #3
-sub x30, x8, #0
-sub x1, x17, #1
-sub x19, x0, #0
-sub x20, x10, #0
-sub x28, x1, #0
-sub x11, x2, #4
-sub x5, x25, #5
-sub x9, x13, #1
-sub x15, x29, #2, lsl #12
-sub x2, x2, #4, lsl #12
-sub x3, x1, #4, lsl #12
-sub x10, x6, #3, lsl #12
-sub x8, sp, #4, lsl #12
-sub x24, x10, #0, lsl #12
-sub x1, x8, #2, lsl #12
-sub x0, x17, #2, lsl #12
-sub x30, x21, #1, lsl #12
-sub x5, x29, #2, lsl #12
-sub w17, w14, w28
-sub w9, w3, w30
-sub w25, w0, w0
-sub w18, w27, w6
-sub w27, w29, w5
-sub w5, w22, w16
-sub w26, w8, w24
-sub w16, w0, w9
-sub w8, w0, w30
-sub w26, w3, w28
-sub w24, w20, w10, lsr #4
-sub w13, w19, w23, asr #0
-sub w9, w8, w25, lsr #4
-sub w30, w10, w28, lsr #4
-sub w4, w6, w20, lsl #0
-sub w29, w4, w14, lsr #3
-sub w10, w15, w28, lsr #3
-sub w26, w2, w23, asr #2
-sub w10, w27, w24, lsr #1
-sub w30, w1, w11, asr #0
-sub x15, xzr, x22
-sub x4, x3, x6
-sub x1, x8, x21
-sub x24, x16, xzr
-sub x7, x12, x20
-sub x11, x7, x22
-sub x2, x25, x5
-sub x12, x20, x29
-sub x15, x21, x27
-sub x17, x0, x22
-sub x1, x15, x21, lsl #1
-sub x24, x30, x20, lsl #1
-sub x12, x16, x18, lsl #3
-sub x6, xzr, x4, lsr #2
-sub x29, x2, x14, lsr #0
-sub x30, x6, x27, asr #2
-sub x17, x16, x22, lsr #0
-sub x9, x30, x5, lsr #2
-sub x24, x10, x15, lsr #3
-sub x12, x17, x30, asr #2
-subs w28, w13, w16
-subs w27, wsp, w15
-subs w25, w5, w10
-subs w6, w12, w27
-subs w22, w2, w1
-subs w6, w11, w0
-subs w7, w9, wzr
-subs w11, w20, w14
-subs w3, w18, w27
-subs w12, w16, w11
-subs w23, w16, w25, uxtx #0
-subs w23, w27, w11, sxth #1
-subs w26, w9, w1, uxtw #0
-subs w30, w5, w23, uxtw #1
-subs w15, w1, w15, sxtb #3
-subs w8, w7, w11, uxtb #3
-subs w8, w20, w8, sxtx #0
-subs w3, w7, w26, uxtw #2
-subs w0, w25, w14, uxth #4
-subs w13, w3, w17, uxth #2
-subs x13, x17, x7
-subs x18, x6, x23
-subs x26, x13, x2
-subs x14, x4, x25
-subs x23, x12, x8
-subs x2, x19, x16
-subs x13, x6, x21
-subs x11, sp, x3
-subs x17, x11, x29
-subs x20, x29, x14
-subs x8, x12, x0, uxtx #1
-subs x0, x25, x20, sxtx #0
-subs x27, x23, x21, uxtx #0
-subs x24, x2, x23, sxtx #1
-subs x15, x2, x2, sxtx #4
-subs x28, x8, x3, sxtx #2
-subs x3, x2, x18, uxtx #3
-subs x30, x24, x29, sxtx #0
-subs x18, x8, x2, uxtx #4
-subs x23, x12, x22, uxtx #2
-subs w13, w27, #2
-subs w24, w24, #2
-subs w19, w1, #5
-subs w4, w6, #5
-subs w26, w24, #3
-subs w29, w21, #1
-subs w4, w7, #0
-subs w23, w15, #5
-subs w4, w3, #1
-subs w8, w26, #3
-subs w13, w2, #3, lsl #12
-subs w14, w13, #5, lsl #12
-subs w17, w10, #2, lsl #12
-subs w5, w15, #3, lsl #12
-subs w28, w22, #3, lsl #12
-subs w15, w1, #5, lsl #12
-subs w30, w10, #4, lsl #12
-subs w17, w12, #1, lsl #12
-subs w1, w28, #0, lsl #12
-subs w7, w25, #2, lsl #12
-subs x26, x15, #1
-subs x13, x1, #4
-subs x14, x21, #0
-subs x17, x14, #4
-subs x30, sp, #0
-subs x30, x26, #0
-subs x13, x22, #0
-subs x21, x30, #2
-subs x30, x22, #4
-subs x2, x3, #5
-subs x12, x3, #0, lsl #12
-subs x10, x19, #1, lsl #12
-subs x19, x10, #0, lsl #12
-subs x29, x9, #1, lsl #12
-subs x8, x24, #2, lsl #12
-subs x15, x14, #4, lsl #12
-subs x12, x1, #2, lsl #12
-subs x6, x24, #3, lsl #12
-subs x18, x2, #1, lsl #12
-subs x19, x2, #0, lsl #12
-subs w17, w19, w27
-subs w29, w23, w14
-subs w11, w27, w24
-subs w13, w10, w2
-subs w30, w18, w26
-subs w15, w11, w8
-subs w25, w22, w9
-subs w26, w29, w1
-subs w25, w12, w3
-subs w14, w0, w5
-subs w6, w17, w25, asr #0
-subs w16, w16, w25, lsl #0
-subs w7, w22, w10, lsr #2
-subs w4, w20, w20, lsl #4
-subs w10, w21, w8, lsl #1
-subs w1, w20, w25, asr #3
-subs wzr, w21, w5, lsl #0
-subs w20, w8, w6, lsr #4
-subs w15, w20, w10, lsr #3
-subs w19, w30, w14, lsl #4
-subs x28, x17, x0
-subs x4, x25, x22
-subs x5, x14, x16
-subs x20, x2, x15
-subs x9, x8, x7
-subs x0, x28, x15
-subs x6, x9, x4
-subs x21, x30, x14
-subs x15, x24, x1
-subs x13, x6, x8
-subs x23, x3, x26, lsl #1
-subs x19, x14, x13, asr #4
-subs x1, x4, x13, lsr #1
-subs x20, x11, x8, lsl #2
-subs x17, x7, x7, asr #3
-subs x22, x7, x23, lsl #1
-subs x0, x26, x17, lsr #1
-subs x24, x13, x0, lsr #2
-subs x30, x7, x19, lsl #4
-subs xzr, xzr, x29, asr #3
-sxtb w14, w24
-sxtb w10, w21
-sxtb w8, w0
-sxtb w11, w15
+smaddl x22, w27, w27, x17
+smaddl x9, w29, w1, x12
+smaddl x20, w29, w0, x10
+smaddl x13, w10, w10, x13
+smaddl x13, w9, w14, x4
+smaddl x22, w14, w17, x22
+smaddl xzr, w19, w20, x20
+smaddl x21, w25, w17, x11
+smaddl x20, w13, w28, x29
+smaddl x10, w30, w10, xzr
+smnegl x27, w10, w9
+smnegl x8, w20, w19
+smnegl x21, w1, w28
+smnegl x3, w5, w18
+smnegl x17, w23, w8
+smnegl x16, w10, w29
+smnegl x4, w0, w22
+smnegl x22, w11, w10
+smnegl x3, w8, w7
+smnegl x13, w6, w17
+smsubl x12, w1, w27, x21
+smsubl x9, w16, w8, x30
+smsubl x17, w4, w1, x23
+smsubl x23, w18, w14, xzr
+smsubl x3, w24, w28, x7
+smsubl x24, w18, w29, x4
+smsubl x28, w0, w12, x4
+smsubl x14, w18, w21, x26
+smsubl x19, w17, w16, x28
+smsubl x1, w24, w26, x18
+smulh x29, x27, x9
+smulh x20, x13, x23
+smulh x19, x16, x16
+smulh x16, x24, x8
+smulh x2, x21, x12
+smulh xzr, x22, x24
+smulh x3, x4, x10
+smulh x24, x30, x29
+smulh x9, x14, x25
+smulh x10, x7, x19
+smull x29, w4, w14
+smull x6, w24, w28
+smull x30, w11, w12
+smull x14, w27, w4
+smull x22, w30, w26
+smull x3, w29, w16
+smull x27, w0, w20
+smull x6, w24, w18
+smull x3, w2, w1
+smull x29, w12, w8
+sub w20, w9, w12
+sub w19, w16, w4
+sub w26, w14, w15
+sub w8, w28, w11
+sub w17, w18, w9
+sub w8, w21, w6
+sub w6, w17, w6
+sub w18, w23, w30
+sub w23, w26, w0
+sub w8, w23, w13
+sub w11, w8, w22, uxth #2
+sub w26, w21, w2, sxtb #4
+sub w13, w16, w16, sxth #4
+sub w11, w27, w24, sxtx #4
+sub w5, w5, w27, uxtb #4
+sub w16, w27, w4, sxth #2
+sub w19, w27, w26, sxtx #3
+sub w23, w14, w2, uxtx #4
+sub w13, w13, w19, sxtx #4
+sub w5, w16, w30, sxtw #4
+sub x13, x24, x20
+sub x6, x24, x23
+sub x22, x19, x27
+sub x13, x6, x12
+sub x16, x0, x20
+sub x29, x2, x2
+sub x20, x5, x4
+sub x0, x18, x23
+sub x7, x21, x13
+sub x25, x19, x28
+sub x20, x2, x20, sxtx #1
+sub x19, x10, x16, uxtx #4
+sub x21, x6, x18, uxtx #3
+sub x12, x28, x8, uxtx #2
+sub x4, x13, x7, uxtx #4
+sub x27, x21, x18, sxtx #1
+sub x26, x22, x11, uxtx #4
+sub x7, x14, x20, sxtx #1
+sub x11, x18, x20, uxtx #1
+sub x6, x19, x11, sxtx #3
+sub w26, w17, #2
+sub w16, w18, #1
+sub w12, w7, #5
+sub w1, w16, #5
+sub w5, w27, #3
+sub w15, w19, #3
+sub w2, w28, #2
+sub w13, w14, #0
+sub w20, w29, #3
+sub w9, w8, #5
+sub w29, w17, #2, lsl #12
+sub w1, w2, #4, lsl #12
+sub w30, w27, #4, lsl #12
+sub w30, w11, #0, lsl #12
+sub w25, w17, #5, lsl #12
+sub w16, w1, #4, lsl #12
+sub w21, w5, #5, lsl #12
+sub w28, w3, #3, lsl #12
+sub w8, w14, #0, lsl #12
+sub w22, w11, #2, lsl #12
+sub x29, x4, #0
+sub x2, x6, #2
+sub x26, x20, #3
+sub x21, x2, #2
+sub x1, x28, #2
+sub x19, x6, #1
+sub x20, x13, #1
+sub x20, x0, #2
+sub x16, x19, #2
+sub x14, x2, #4
+sub x22, x16, #0, lsl #12
+sub x1, x15, #0, lsl #12
+sub x27, x16, #3, lsl #12
+sub x19, x27, #5, lsl #12
+sub x9, x0, #1, lsl #12
+sub x0, x26, #1, lsl #12
+sub x9, x28, #4, lsl #12
+sub x2, x4, #0, lsl #12
+sub x25, sp, #2, lsl #12
+sub x3, x10, #0, lsl #12
+sub w28, w14, wzr
+sub w8, w28, w14
+sub w27, w23, w30
+sub w2, w25, w25
+sub w11, w13, w25
+sub w16, w6, w19
+sub w28, w4, w15
+sub w20, w13, w19
+sub w13, w4, w18
+sub w25, w24, w29
+sub w7, w20, w11, lsl #2
+sub w8, w20, w24, lsr #4
+sub w26, w24, w11, asr #1
+sub w4, w21, w11, asr #2
+sub w15, w7, w6, lsr #2
+sub w19, w1, w13, asr #1
+sub w10, w19, w14, asr #2
+sub w11, w29, w14, lsl #3
+sub w1, w29, w20, lsl #2
+sub w26, w17, w23, lsl #3
+sub x9, x21, x15
+sub x15, x17, x10
+sub x2, x18, x23
+sub x14, x12, x1
+sub x1, x26, x22
+sub x27, x5, x20
+sub x10, x8, x16
+sub x11, x5, x5
+sub x23, x7, xzr
+sub x8, x30, x4
+sub x17, x7, x25, asr #4
+sub x11, x10, x24, lsl #1
+sub x6, x9, x2, lsr #4
+sub x25, x3, x8, lsl #1
+sub x16, x29, x24, lsl #0
+sub x16, x28, x1, lsr #1
+sub x6, x9, x2, lsr #4
+sub x25, x10, x20, asr #1
+sub x22, x24, x17, asr #1
+sub x21, x17, x3, asr #2
+subs w19, w14, w28
+subs w19, w3, w30
+subs w27, w0, w0
+subs w5, w27, w6
+subs w7, w29, w5
+subs w14, w22, w16
+subs w12, w8, w24
+subs w22, w0, w9
+subs w24, w0, w30
+subs w13, w3, w28
+subs w19, w20, w10, sxtb #4
+subs w3, w19, w23, sxth #0
+subs w20, w8, w25, sxth #4
+subs w5, w10, w28, sxtw #4
+subs w13, w6, w20, sxtb #0
+subs w2, w4, w14, sxtx #3
+subs w4, w15, w28, sxtb #3
+subs w23, w2, w23, uxtw #2
+subs w17, w27, w24, uxtx #1
+subs w25, w1, w11, uxtw #0
+subs x13, sp, x22
+subs x22, x3, x6
+subs x22, x8, x21
+subs x6, x16, xzr
+subs x5, x12, x20
+subs x5, x7, x22
+subs x4, x25, x5
+subs x21, x20, x29
+subs x0, x21, x27
+subs x14, x0, x22
+subs x6, x15, x21, sxtx #1
+subs x28, x30, x20, uxtx #1
+subs x28, x16, x18, uxtx #3
+subs x19, sp, x4, uxtx #2
+subs x12, x2, x14, sxtx #0
+subs x0, x6, x27, sxtx #2
+subs x4, x16, x22, uxtx #0
+subs x22, x30, x5, uxtx #2
+subs x3, x10, x15, sxtx #3
+subs x21, x17, x30, uxtx #2
+subs w28, w13, #0
+subs w27, wsp, #5
+subs w25, w5, #0
+subs w6, w12, #1
+subs w22, w2, #5
+subs w6, w11, #0
+subs w7, w9, #1
+subs w11, w20, #0
+subs w3, w18, #1
+subs w12, w16, #1
+subs w23, w16, #1, lsl #12
+subs w30, wsp, #0, lsl #12
+subs w2, w11, #1, lsl #12
+subs w18, w7, #5, lsl #12
+subs w8, w18, #5, lsl #12
+subs w30, w5, #5, lsl #12
+subs w15, w30, #0, lsl #12
+subs w17, w15, #2, lsl #12
+subs w21, w11, #1, lsl #12
+subs w13, w24, #3, lsl #12
+subs x8, x20, #4
+subs x17, sp, #1
+subs x9, x26, #2
+subs x24, x0, #3
+subs x7, x1, #4
+subs x13, x3, #5
+subs x30, x6, #5
+subs x14, x7, #2
+subs x3, x23, #1
+subs x10, x2, #4
+subs x19, x25, #2, lsl #12
+subs x28, x8, #3, lsl #12
+subs x0, x16, #4, lsl #12
+subs x21, x21, #4, lsl #12
+subs x5, x3, #5, lsl #12
+subs x1, x29, #4, lsl #12
+subs x21, x14, #2, lsl #12
+subs x3, x0, #4, lsl #12
+subs x20, x6, #5, lsl #12
+subs x15, x19, #0, lsl #12
+subs w22, w23, w21
+subs w12, w4, w29
+subs w2, w23, w13
+subs w18, w29, w2
+subs w2, w29, w6
+subs w19, w8, w3
+subs w7, w5, w18
+subs w2, w18, w18
+subs w4, w29, w24
+subs w29, w17, w11
+subs w25, w8, w2, lsr #4
+subs w6, w12, w22, lsr #2
+subs w8, w27, w28, lsl #0
+subs w2, w29, w1, asr #1
+subs w6, w23, w7, asr #4
+subs w11, w21, w1, asr #4
+subs w12, w2, w15, asr #4
+subs w3, w21, w28, asr #3
+subs w22, w2, w15, lsr #3
+subs w7, w20, w10, asr #3
+subs x15, x15, x17
+subs x22, x7, x26
+subs x1, x29, x28
+subs x10, x4, x8
+subs x12, x19, x23
+subs x28, x22, x13
+subs x25, x16, x0
+subs x15, x19, x15
+subs x1, x0, x23
+subs x21, x10, xzr
+subs x14, x26, x14, lsr #2
+subs x22, x26, x18, asr #1
+subs x28, x23, x30, asr #0
+subs x22, x4, x0, asr #3
+subs x17, x3, x12, lsl #1
+subs x13, x4, x10, lsl #2
+subs x9, x17, x8, lsr #3
+subs x25, x14, x10, lsl #3
+subs x0, x7, x24, lsl #0
+subs x2, x21, x19, lsr #4
+sxtb w17, w19
+sxtb w27, w29
 sxtb w23, w14
-sxtb w29, w23
-sxtb w9, w14
-sxtb w17, w27
-sxtb w7, wzr
-sxtb w27, w12
-sxtb x14, w25
-sxtb x19, w1
-sxtb x4, w5
-sxtb x0, w3
-sxtb x2, w7
-sxtb x5, w17
-sxtb xzr, w15
-sxtb x6, w7
-sxtb x15, w18
-sxtb x23, w7
-sxth w0, w20
-sxth w30, w9
-sxth w3, w16
-sxth w4, w10
-sxth w15, wzr
-sxth w22, w29
-sxth w24, w10
-sxth w30, w28
-sxth w15, w30
-sxth wzr, w18
-sxth x5, w5
-sxth x3, w4
-sxth x20, w9
-sxth x12, w4
-sxth x27, w3
-sxth x11, w28
-sxth x23, w9
-sxth x5, w26
-sxth x25, w10
-sxth x4, w8
-sxtw x9, w27
-sxtw x5, w2
-sxtw x5, w3
-sxtw x30, w20
-sxtw x1, w30
-sxtw x6, w6
-sxtw x3, w9
-sxtw x11, w23
-sxtw x19, w23
-sxtw x27, w14
-tst w26, #3
-tst w10, #2
-tst w16, #1
-tst w12, #2
-tst w26, #1
-tst w18, #4
-tst w11, #4
-tst w5, #1
-tst w27, #1
-tst w5, #1
-tst x2, #4
+sxtb w11, w27
+sxtb w24, w13
+sxtb w10, w2
+sxtb w30, w18
+sxtb w26, w15
+sxtb w11, w8
+sxtb w25, w22
+sxtb x9, w26
+sxtb x29, w1
+sxtb x25, w12
+sxtb x3, w14
+sxtb x0, w5
+sxtb x6, w17
+sxtb x25, w1
+sxtb x14, w16
+sxtb x16, w25
+sxtb x12, w8
+sxth w7, w22
+sxth w10, w5
+sxth w8, w4
+sxth w20, w20
+sxth w12, w14
+sxth w10, w21
+sxth w8, w8
+sxth w22, w1
+sxth w20, w25
+sxth w15, w20
+sxth xzr, w21
+sxth x5, w24
+sxth x22, w20
+sxth x8, w6
+sxth x13, w20
+sxth x15, w20
+sxth x10, w25
+sxth x26, w19
+sxth x30, w14
+sxth x7, w10
+sxtw x28, w17
+sxtw x0, w4
+sxtw x25, w22
+sxtw x5, w14
+sxtw x16, w20
+sxtw x2, w15
+sxtw x9, w8
+sxtw x7, w0
+sxtw x28, w15
+sxtw x6, w9
+tst w4, #2
+tst w30, #3
+tst w15, #1
+tst w1, #2
+tst w6, #1
+tst w23, #4
+tst w26, #4
+tst w7, #4
+tst w14, #2
+tst w1, #3
+tst x1, #1
+tst x13, #4
+tst x12, #1
+tst x11, #1
 tst x3, #2
-tst x21, #3
-tst x28, #1
-tst x5, #1
-tst x22, #4
-tst x30, #2
-tst x16, #3
-tst x17, #1
-tst x24, #4
-tst w13, w10
-tst w14, w24
-tst w1, w20
-tst w9, w28
-tst w24, w14
-tst w25, w26
-tst w25, w28
-tst wzr, w14
-tst w10, w27
-tst w22, w15
-tst w19, w13, asr #4
-tst w14, w30, lsl #4
-tst w27, w24, asr #2
-tst w2, w24, lsl #2
-tst w12, w9, lsl #1
-tst w23, w25, asr #3
-tst w21, w29, ror #2
-tst w25, w22, asr #0
-tst w3, w28, asr #4
-tst w27, wzr, lsl #3
-tst x23, x26
-tst x30, x26
-tst x18, x30
-tst x30, xzr
-tst x8, x30
-tst x3, xzr
-tst x24, x2
-tst x16, x13
-tst xzr, x16
-tst x13, x24
-tst x6, x27, lsr #0
-tst x24, x3, asr #2
-tst x2, x10, lsr #2
-tst x4, x7, lsl #0
-tst x5, x18, lsr #2
-tst x16, x25, lsr #4
-tst x27, x29, asr #1
-tst x13, x3, ror #1
-tst x30, x24, lsl #3
-tst x27, x22, lsr #4
-ubfiz w0, w18, #1, #1
-ubfiz w25, w12, #4, #4
-ubfiz w30, w16, #1, #3
-ubfiz w9, w25, #4, #1
-ubfiz w23, w13, #4, #1
-ubfiz w16, w18, #1, #3
-ubfiz w10, w20, #2, #2
-ubfiz w11, w14, #4, #4
-ubfiz w1, w27, #1, #3
-ubfiz w7, w11, #2, #2
-ubfiz x27, x6, #1, #2
-ubfiz xzr, x11, #2, #3
-ubfiz x24, x8, #4, #1
-ubfiz x26, x19, #3, #1
-ubfiz x7, x27, #3, #3
-ubfiz x10, x13, #3, #4
-ubfiz x9, x14, #2, #1
-ubfiz x25, xzr, #3, #1
-ubfiz x5, x10, #2, #1
-ubfiz x21, x3, #4, #2
-ubfm w11, w22, #0, #3
-ubfm w9, w11, #2, #4
-ubfm w7, w20, #0, #0
-ubfm w2, w1, #4, #1
-ubfm w15, w1, #0, #4
-ubfm w0, w17, #3, #0
-ubfm w27, w22, #1, #3
-ubfm w25, w5, #4, #2
-ubfm w27, w18, #2, #1
-ubfm w30, w21, #2, #3
-ubfm x9, x23, #3, #4
-ubfm x24, x18, #2, #0
-ubfm x19, x18, #1, #1
-ubfm x3, x12, #3, #1
-ubfm x2, x3, #4, #0
-ubfm x8, x13, #4, #2
-ubfm xzr, x10, #0, #3
-ubfm xzr, x28, #1, #1
-ubfm x19, x24, #3, #2
-ubfm x10, x10, #4, #4
-ubfx w28, w3, #3, #1
-ubfx w15, w11, #4, #2
-ubfx w15, w14, #1, #4
-ubfx w27, w11, #4, #4
-ubfx w21, w2, #1, #1
-ubfx w30, w27, #2, #3
-ubfx w19, w17, #3, #3
-ubfx w27, w17, #1, #1
-ubfx w20, w14, #1, #4
-ubfx w25, w23, #1, #1
-ubfx x5, x0, #1, #2
-ubfx x12, x27, #1, #2
-ubfx x29, x20, #3, #1
-ubfx x15, x19, #3, #4
-ubfx x4, x12, #2, #4
-ubfx x29, x29, #4, #3
-ubfx x11, x15, #2, #1
-ubfx x6, x10, #2, #1
-ubfx x10, x13, #2, #3
-ubfx x8, x9, #1, #2
-ucvtf s29, w30
-ucvtf s1, w28
-ucvtf s1, w12
-ucvtf s16, w23
-ucvtf s27, w13
-ucvtf s4, w16
-ucvtf s14, w16
-ucvtf s11, w30
-ucvtf s11, w30
-ucvtf s29, w23
-ucvtf d10, w5
-ucvtf d30, w24
-ucvtf d23, w8
-ucvtf d11, w20
-ucvtf d20, w4
-ucvtf d5, w17
-ucvtf d17, w11
-ucvtf d30, w14
-ucvtf d22, w22
-ucvtf d23, w0
-ucvtf s31, x8
-ucvtf s10, x8
-ucvtf s24, x26
-ucvtf s6, x13
+tst x17, #4
+tst x7, #4
+tst x22, #3
+tst x7, #4
+tst x3, #3
+tst w0, w26
+tst w17, w26
+tst w18, w24
+tst w13, w0
+tst w5, w15
+tst w30, w7
+tst w19, w11
+tst w18, wzr
+tst wzr, w29
+tst w7, w2
+tst w14, w24, asr #4
+tst w8, w0, ror #2
+tst w23, w14, lsr #2
+tst w9, w14, lsr #3
+tst w7, wzr, ror #3
+tst w14, w25, ror #4
+tst w4, w5, lsl #0
+tst w2, w7, lsr #3
+tst wzr, w15, asr #4
+tst w15, w18, ror #2
+tst x0, x20
+tst x30, x9
+tst x3, x16
+tst x4, x10
+tst x15, xzr
+tst x22, x29
+tst x24, x10
+tst x30, x28
+tst x15, x30
+tst xzr, x18
+tst x5, x5, ror #0
+tst x20, x9, lsl #2
+tst x27, x3, ror #1
+tst x23, x9, lsr #4
+tst x25, x10, lsl #0
+tst x9, x27, lsr #3
+tst x5, x3, asr #1
+tst x1, x30, asr #0
+tst x3, x9, ror #0
+tst x19, x23, ror #1
+ubfiz w26, w6, #3, #2
+ubfiz w16, w16, #1, #2
+ubfiz w26, w16, #3, #4
+ubfiz w11, w23, #2, #1
+ubfiz w27, w4, #2, #1
+ubfiz w2, w11, #4, #2
+ubfiz w21, w14, #1, #1
+ubfiz w5, w24, #3, #4
+ubfiz w30, w1, #1, #3
+ubfiz w17, w28, #1, #4
+ubfiz x13, x10, #3, #1
+ubfiz x1, x20, #2, #1
+ubfiz x24, x14, #2, #3
+ubfiz x25, x28, #4, #3
+ubfiz x10, x27, #3, #4
+ubfiz x19, x13, #3, #3
+ubfiz x14, x30, #1, #4
+ubfiz x27, x24, #3, #1
+ubfiz x2, x24, #1, #1
+ubfiz x12, x9, #1, #1
+ubfm w23, w25, #2, #3
+ubfm w21, w29, #0, #2
+ubfm w25, w22, #1, #0
+ubfm w3, w28, #4, #4
+ubfm w27, wzr, #0, #3
+ubfm w23, w26, #2, #3
+ubfm w18, w30, #2, #2
+ubfm w8, w30, #3, #0
+ubfm w24, w2, #0, #2
+ubfm wzr, w16, #0, #4
+ubfm x6, x27, #0, #0
+ubfm x24, x3, #1, #2
+ubfm x2, x10, #2, #2
+ubfm x4, x7, #2, #0
+ubfm x5, x18, #4, #2
+ubfm x16, x25, #0, #4
+ubfm x27, x29, #2, #1
+ubfm x13, x3, #1, #1
+ubfm x30, x24, #3, #3
+ubfm x27, x22, #2, #4
+ubfx w0, w18, #1, #1
+ubfx w25, w12, #4, #4
+ubfx w30, w16, #1, #3
+ubfx w9, w25, #4, #1
+ubfx w23, w13, #4, #1
+ubfx w16, w18, #1, #3
+ubfx w10, w20, #2, #2
+ubfx w11, w14, #4, #4
+ubfx w1, w27, #1, #3
+ubfx w7, w11, #2, #2
+ubfx x27, x6, #1, #2
+ubfx xzr, x11, #2, #3
+ubfx x24, x8, #4, #1
+ubfx x26, x19, #3, #1
+ubfx x7, x27, #3, #3
+ubfx x10, x13, #3, #4
+ubfx x9, x14, #2, #1
+ubfx x25, xzr, #3, #1
+ubfx x5, x10, #2, #1
+ubfx x21, x3, #4, #2
+ucvtf s11, w0
+ucvtf s21, w25
+ucvtf s9, w24
+ucvtf s10, w26
+ucvtf s7, w16
+ucvtf s3, w13
+ucvtf s2, w10
+ucvtf s28, w4
+ucvtf s15, w11
+ucvtf s27, w28
+ucvtf d0, w11
+ucvtf d28, w3
+ucvtf d27, w17
+ucvtf d10, w16
+ucvtf d25, w16
+ucvtf d29, w16
+ucvtf d27, w10
+ucvtf d10, w11
+ucvtf d30, w4
+ucvtf d20, w7
+ucvtf s9, x19
+ucvtf s22, x25
+ucvtf s24, x9
 ucvtf s22, x11
-ucvtf s21, x30
-ucvtf s14, x28
-ucvtf s21, x24
-ucvtf s30, x23
-ucvtf s5, x22
-ucvtf d4, x21
-ucvtf d4, x27
-ucvtf d17, x21
-ucvtf d8, x26
-ucvtf d17, x13
-ucvtf d24, x13
-ucvtf d28, x8
-ucvtf d30, x12
-ucvtf d24, x27
-ucvtf d23, x25
-udiv w8, w13, w15
-udiv w23, w0, w4
-udiv w29, wzr, w5
-udiv w2, w17, w10
-udiv w13, w21, w0
-udiv w30, w24, w8
-udiv w5, w9, w8
-udiv w29, w25, w4
-udiv w0, w23, w24
-udiv w25, w28, w16
-udiv x7, x4, x29
-udiv x22, x27, x29
-udiv x27, x24, x28
-udiv x0, x27, x14
-udiv x10, x8, x3
-udiv x10, x6, x27
-udiv x19, x11, x4
-udiv x27, x8, x30
-udiv x0, x9, x21
-udiv x24, x2, x17
-umaddl x8, w9, w22, x5
-umaddl x0, w17, w3, x27
-umaddl x10, wzr, w27, x5
-umaddl x13, w6, w13, x17
-umaddl x16, w19, w12, x3
-umaddl x30, w17, wzr, x6
-umaddl x15, wzr, w15, x4
-umaddl x23, w17, w22, x0
-umaddl x27, w12, w5, x27
-umaddl x29, w8, w22, x7
-umnegl x8, w17, w12
-umnegl x21, w23, w25
-umnegl x6, w8, w12
-umnegl x19, w11, w10
-umnegl x4, w10, w17
-umnegl x19, w9, w0
-umnegl x23, w1, w18
-umnegl x13, w1, w13
-umnegl x25, w6, w8
-umnegl x23, w15, w30
-umov w8, v23.b[3]
-umov w2, v12.b[3]
-umov w10, v19.b[3]
-umov w26, v6.b[2]
-umov w25, v10.b[1]
-umov w12, v29.b[2]
-umov w6, v20.b[3]
-umov w3, v2.b[0]
-umov w4, v27.b[3]
-umov w7, v18.b[2]
-umov w25, v17.h[1]
-umov w27, v28.h[1]
-umov w29, v0.h[0]
-umov w29, v17.h[2]
-umov w12, v13.h[0]
-umov w23, v25.h[1]
-umov w14, v6.h[2]
-umov w25, v5.h[0]
-umov w24, v17.h[3]
-umov w9, v5.h[2]
-umov w12, v23.s[3]
-umov w26, v25.s[3]
-umov w23, v1.s[3]
-umov w4, v25.s[1]
-umov w2, v11.s[2]
-umov w11, v2.s[3]
-umov w17, v7.s[2]
-umov w22, v28.s[3]
-umov w6, v2.s[1]
-umov w27, v30.s[2]
-umov x5, v1.d[0]
-umov x8, v0.d[1]
-umov x9, v9.d[0]
-umov x17, v15.d[1]
-umov x26, v23.d[0]
-umov x27, v11.d[0]
-umov x5, v9.d[0]
-umov x23, v5.d[0]
-umov x28, v1.d[0]
-umov x17, v25.d[1]
-umsubl x22, w30, w20, x4
-umsubl x3, w20, w11, x2
-umsubl x30, w20, w29, x13
-umsubl x21, w5, w4, x2
-umsubl x7, w15, w16, x29
-umsubl x25, w6, w12, x30
-umsubl x25, w27, w0, x13
-umsubl x27, w25, w0, x18
-umsubl x23, w20, w22, x26
-umsubl x9, w2, w29, x7
-umulh x22, x26, x20
-umulh x11, x0, x24
-umulh x13, x7, x7
-umulh x30, x4, x0
-umulh x4, x17, xzr
-umulh x29, x12, xzr
-umulh x11, x8, x24
-umulh x11, x26, x15
-umulh x0, x16, x10
-umulh x9, x18, x7
-umull x16, w8, w1
-umull x4, w20, w1
-umull x28, w1, w9
-umull x3, wzr, w13
-umull x4, w4, w30
-umull x3, w1, w11
-umull x2, w12, w19
-umull x26, w24, w13
-umull x9, w24, w29
-umull x19, w1, w16
-uxtb w26, w17
-uxtb w24, w28
-uxtb w21, w12
-uxtb w29, w17
-uxtb w14, w6
-uxtb w20, w13
-uxtb w20, w24
-uxtb w17, w18
-uxtb w27, w19
-uxtb w29, w29
-uxth wzr, w16
-uxth w23, w23
-uxth w29, w1
-uxth w15, w27
-uxth w20, w16
-uxth w11, w15
-uxth w1, w3
-uxth w11, w22
-uxth w16, w8
-uxth w7, w30
+ucvtf s19, x23
+ucvtf s15, x10
+ucvtf s3, x3
+ucvtf s25, x30
+ucvtf s2, x22
+ucvtf s15, x2
+ucvtf d8, x28
+ucvtf d31, x21
+ucvtf d31, x25
+ucvtf d7, x9
+ucvtf d31, x4
+ucvtf d2, x18
+ucvtf d19, x5
+ucvtf d20, x20
+ucvtf d10, x7
+ucvtf d19, x29
+udiv w28, w3, w18
+udiv w0, w15, w11
+udiv wzr, w17, w15
+udiv w14, w12, w23
+udiv w27, w11, w27
+udiv w27, w21, w2
+udiv w24, w20, w30
+udiv w27, w29, w18
+udiv w19, w17, w30
+udiv w30, w27, w17
+udiv x28, x24, x20
+udiv x14, x24, x3
+udiv x25, x23, x20
+udiv x8, x5, x0
+udiv x0, x1, x12
+udiv x27, x28, x1
+udiv x29, x20, x22
+udiv x28, x15, x19
+udiv x14, x3, x4
+udiv x12, x1, xzr
+umaddl x29, w29, w23, x18
+umaddl x11, w15, w21, x4
+umaddl x6, w10, w13, x12
+umaddl x10, w13, w13, x22
+umaddl x8, w9, w24, x5
+umaddl x29, w14, w1, x13
+umaddl x1, w15, w16, x5
+umaddl x27, w17, w4, x25
+umaddl x14, w28, w11, x25
+umaddl x11, w0, w29, x18
+umnegl x10, w10, w30
+umnegl x21, w23, w11
+umnegl x11, wzr, w20
+umnegl x3, w5, w17
+umnegl x17, w6, w30
+umnegl x18, w22, w14
+umnegl x23, w17, wzr
+umnegl x28, w10, w13
+umnegl x24, w21, w6
+umnegl x3, w22, w4
+umsubl x21, w0, w14, x19
+umsubl x21, w6, w30, x1
+umsubl x5, w18, w4, x10
+umsubl x4, w22, w17, x2
+umsubl x8, w7, w17, x0
+umsubl x24, w16, w28, x3
+umsubl x30, w20, w24, x4
+umsubl x23, w14, w8, x13
+umsubl x15, w23, w0, x4
+umsubl x29, wzr, w5, x2
+umulh x17, x10, x13
+umulh x21, x0, x30
+umulh x24, x8, x5
+umulh x9, x8, x29
+umulh x25, x4, x0
+umulh x23, x24, x25
+umulh x28, x16, x7
+umulh x4, x29, x22
+umulh x27, x29, x27
+umulh x24, x28, x0
+umull x27, w14, w10
+umull x8, w3, w10
+umull x6, w27, w19
+umull x11, w4, w27
+umull x8, w30, w0
+umull x9, w21, w24
+umull x2, w17, w8
+umull x9, w22, w5
+umull x0, w17, w3
+umull x27, w10, wzr
+uxtb w27, w5
+uxtb w13, w6
+uxtb w13, w17
+uxtb w16, w19
+uxtb w12, w3
+uxtb w30, w17
+uxtb wzr, w6
+uxtb w15, wzr
+uxtb w15, w4
+uxtb w23, w17
+uxth w22, w0
+uxth w27, w12
+uxth w5, w27
+uxth w29, w8
+uxth w22, w7
+uxth w8, w17
+uxth w12, w21
+uxth w23, w25
+uxth w6, w8
+uxth w12, w19
 .globl INSTRUCTION_END
 INSTRUCTION_END:
 "#
