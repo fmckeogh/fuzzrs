@@ -2,7 +2,6 @@
 #![no_main]
 
 use {
-    crate::tests::instructions,
     core::{
         arch::{asm, global_asm},
         fmt::Display,
@@ -14,27 +13,18 @@ use {
 mod boot;
 mod pl011;
 mod print;
-mod tests;
+mod tests_float;
+mod tests_scalar;
+mod tests_vector;
 
 const EMIT_AS_TESTS: bool = true;
 
 #[unsafe(no_mangle)]
 extern "C" fn kmain() {
-    let el = {
-        let el: u64;
-        unsafe { asm!("mrs {}, CurrentEL", out(reg) el) };
-        u8::try_from(el >> 2).unwrap()
-    };
-
-    println!("starting (EL{el})");
-
     // Enable FP, Advanced SIMD, SME, and SVE instructions
     unsafe { asm!("msr cpacr_el1, {}", in(reg) (0b11u64 << 20 | 0b11 << 24)) }
 
     run_tests();
-
-    println!("finished");
-    loop {}
 }
 
 fn run_tests() {
@@ -42,10 +32,20 @@ fn run_tests() {
     // run_test(0xcb23c083);
     let mut rng = SmallRng::seed_from_u64(0x1234);
 
-    instructions()
+    if EMIT_AS_TESTS {
+        println!("&[");
+    }
+
+    tests_scalar::instructions()
+        // tests_vector::instructions()
+        //  tests_float::instructions()
         .iter()
         .enumerate()
         .for_each(|(index, instruction)| run_test(&mut rng, index, *instruction));
+
+    if EMIT_AS_TESTS {
+        println!("]");
+    }
 }
 
 fn run_test(rng: &mut SmallRng, index: usize, instruction: u32) {
@@ -66,9 +66,7 @@ fn run_test(rng: &mut SmallRng, index: usize, instruction: u32) {
     if EMIT_AS_TESTS {
         println!(
             r#"
-			#[common::ktest]
-			fn fuzz_{instruction:08x}_{index}() {{
-				super::run_test({instruction:#08x},{index},
+			({instruction:#08x},{index},
 			"#,
         );
         print_gprs(&input_ctx);
@@ -79,7 +77,7 @@ fn run_test(rng: &mut SmallRng, index: usize, instruction: u32) {
         print!(",");
         print_fprs(&output_ctx);
 
-        println!(");}}");
+        println!("),");
     } else {
         println!("output context:\n{output_ctx}");
     }
@@ -276,19 +274,19 @@ test_slot:
 );
 
 fn print_gprs(ctx: &MachineContext) {
-    print!("&[");
+    println!("[");
     ctx.gprs.iter().for_each(|gpr| {
         println!("{gpr:#x}u64,");
     });
-    print!("]");
+    println!("]");
 }
 
 fn print_fprs(ctx: &MachineContext) {
-    print!("&[");
+    println!("[");
     ctx.fprs.iter().for_each(|gpr| {
         println!("{gpr:#x}u128,");
     });
-    print!("]");
+    println!("]");
 }
 
 fn diff(before: &MachineContext, after: &MachineContext) -> impl Iterator<Item = (usize, u64)> {
