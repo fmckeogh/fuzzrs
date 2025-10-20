@@ -36,9 +36,9 @@ fn run_tests() {
         println!("&[");
     }
 
-    tests_scalar::instructions()
-        // tests_vector::instructions()
-        //  tests_float::instructions()
+    //  tests_scalar::instructions()
+    //  tests_vector::instructions()
+    tests_float::instructions()
         .iter()
         .enumerate()
         .for_each(|(index, instruction)| run_test(&mut rng, index, *instruction));
