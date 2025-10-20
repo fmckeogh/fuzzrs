@@ -1,20 +1,22 @@
 #![no_std]
 #![no_main]
 
-use core::{
-    arch::{asm, global_asm},
-    fmt::Display,
-    panic::PanicInfo,
+use {
+    crate::tests::instructions,
+    core::{
+        arch::{asm, global_asm},
+        fmt::Display,
+        panic::PanicInfo,
+    },
+    rand::{Rng, SeedableRng, rngs::SmallRng},
 };
-
-use rand::{Rng, SeedableRng, rngs::SmallRng};
-
-use crate::tests::instructions;
 
 mod boot;
 mod pl011;
 mod print;
 mod tests;
+
+const EMIT_AS_TESTS: bool = true;
 
 #[unsafe(no_mangle)]
 extern "C" fn kmain() {
@@ -40,15 +42,20 @@ fn run_tests() {
     // run_test(0xcb23c083);
     let mut rng = SmallRng::seed_from_u64(0x1234);
 
-    instructions().iter().for_each(|i| run_test(&mut rng, *i));
+    instructions()
+        .iter()
+        .enumerate()
+        .for_each(|(index, instruction)| run_test(&mut rng, index, *instruction));
 }
 
-fn run_test(rng: &mut SmallRng, instruction: u32) {
+fn run_test(rng: &mut SmallRng, index: usize, instruction: u32) {
     let input_ctx = MachineContext::random(rng);
     let mut output_ctx = MachineContext::default();
 
-    println!("running test: {instruction:#010x}");
-    println!("input context:\n{input_ctx}");
+    if !EMIT_AS_TESTS {
+        println!("running test: {instruction:#010x}");
+        println!("input context:\n{input_ctx}");
+    }
 
     unsafe { test_slot = instruction };
     unsafe {
@@ -56,7 +63,26 @@ fn run_test(rng: &mut SmallRng, instruction: u32) {
     }
     unsafe { execute_test(&input_ctx, &mut output_ctx) };
 
-    println!("output context:\n{output_ctx}");
+    if EMIT_AS_TESTS {
+        println!(
+            r#"
+			#[common::ktest]
+			fn fuzz_{instruction:08x}_{index}() {{
+				super::run_test({instruction:#08x},{index},
+			"#,
+        );
+        print_gprs(&input_ctx);
+        print!(",");
+        print_fprs(&input_ctx);
+        print!(",");
+        print_gprs(&output_ctx);
+        print!(",");
+        print_fprs(&output_ctx);
+
+        println!(");}}");
+    } else {
+        println!("output context:\n{output_ctx}");
+    }
 }
 
 #[repr(C)]
@@ -78,6 +104,7 @@ impl MachineContext {
     pub fn random(rng: &mut SmallRng) -> Self {
         let mut ctx = Self::default();
         rng.fill(&mut ctx.gprs);
+        ctx.gprs[31] = 0;
         rng.fill(&mut ctx.fprs);
         ctx
     }
@@ -247,3 +274,34 @@ test_slot:
 .size execute_test, .-execute_test
     "#
 );
+
+fn print_gprs(ctx: &MachineContext) {
+    print!("&[");
+    ctx.gprs.iter().for_each(|gpr| {
+        println!("{gpr:#x}u64,");
+    });
+    print!("]");
+}
+
+fn print_fprs(ctx: &MachineContext) {
+    print!("&[");
+    ctx.fprs.iter().for_each(|gpr| {
+        println!("{gpr:#x}u128,");
+    });
+    print!("]");
+}
+
+fn diff(before: &MachineContext, after: &MachineContext) -> impl Iterator<Item = (usize, u64)> {
+    before
+        .gprs
+        .iter()
+        .zip(after.gprs.iter())
+        .enumerate()
+        .filter_map(|(i, (before, after))| {
+            if before != after {
+                Some((i, *after))
+            } else {
+                None
+            }
+        })
+}

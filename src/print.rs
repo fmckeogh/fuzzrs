@@ -1,5 +1,4 @@
-use crate::pl011::Pl011;
-use core::fmt::Write;
+use {crate::pl011::Pl011, core::fmt::Write};
 
 /// Prints to the console with newline and carriage return
 #[macro_export]
